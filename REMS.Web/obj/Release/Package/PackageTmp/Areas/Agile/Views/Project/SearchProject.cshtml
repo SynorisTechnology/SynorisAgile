@@ -1,0 +1,144 @@
+﻿@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@*List<projectdashboardmodel>
+    GetProjectDashboard();*@
+<div id="content" ng-app="AgileApp" ng-controller="AgileController">
+    <!-- row -->
+    <div class="row">
+        <!-- col -->
+        <div class="col-xs-12 col-sm-7 col-md-7 col-lg-4">
+            <h1 class="page-title txt-color-blueDark">
+                <!-- PAGE HEADER -->
+                <i class="fa-fw fa fa-file-text-o"></i>
+                Projects
+                <span>
+                    >
+                    Overview
+                </span>
+            </h1>
+        </div>
+        <!-- end col -->
+        <!-- right side of the page with the sparkline graphs -->
+        <!-- col -->
+        <div class="col-xs-12 col-sm-5 col-md-5 col-lg-8">
+            <!-- sparks -->
+            <!-- end sparks -->
+        </div>
+        <!-- end col -->
+    </div>
+    <div id="MessageArea" class="alert alert-block alert-{{MessageClass}}" style="display:none;">
+        <a class="close" data-dismiss="alert" href="#">×</a>
+        <h4 class="alert-heading"><i class="fa fa-check-square-o"></i> {{MessageTitle}}</h4>
+        <p>
+            {{Message}}
+        </p>
+    </div>
+    <!-- end row -->
+    <!--
+        The ID "widget-grid" will start to initialize all widgets below
+        You do not need to use widgets if you dont want to. Simply remove
+        the <section></section> and you can use wells or panels instead
+        -->
+    <!-- widget grid -->
+    <section id="widget-grid" class="">
+        <!-- row -->
+        <div class="row">
+            <!-- NEW WIDGET START -->
+            <article class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                <div class="row">
+                    <div class="col-md-8">
+                        <input type="text" class="form-control" placeholder="Search here by Technology, Project Title, Description or Client Information..." id="txtSearchBox" />
+                    </div>
+                    <div class="col-md-4">
+                        <button type="submit" data-ng-click="ShowProjectBySearch()" class="btn btn-primary">
+                            Search
+                        </button>
+                    </div>
+                    <!--  ng-model="project.Budget" -->
+                </div>
+                <br />
+                <!-- Widget ID (each widget will need unique ID)-->
+                <div class="jarviswidget well" id="wid-id-0">
+                    <!-- widget options:
+                        usage: <div class="jarviswidget" id="wid-id-0" data-widget-editbutton="false">
+
+                        data-widget-colorbutton="false"
+                        data-widget-editbutton="false"
+                        data-widget-togglebutton="false"
+                        data-widget-deletebutton="false"
+                        data-widget-fullscreenbutton="false"
+                        data-widget-custombutton="false"
+                        data-widget-collapsed="true"
+                        data-widget-sortable="false"
+
+                        -->
+                    <header>
+                        <span class="widget-icon"> <i class="fa fa-comments"></i> </span>
+                        <h2>Widget Title </h2>
+                    </header>
+
+                    <!-- widget div-->
+                    <div>
+                        <!-- widget edit box -->
+                        <div class="jarviswidget-editbox">
+                            <!-- This area used as dropdown edit box -->
+                            <input class="form-control" type="text">
+                        </div>
+                        <!-- end widget edit box -->
+                        <!-- widget content -->
+                        <div ng-init="GetProjectDashboard()" class="widget-body no-padding">
+                            <table id="example" class="display projects-table table table-striped table-bordered table-hover" cellspacing="0" width="100%">
+                                <thead>
+                                    <tr>
+                                        <th>Projects</th>
+                                        <th>Technology</th>
+                                        <th>Client</th>
+                                        <th>Status</th>
+                                        <th><i class="fa fa-circle txt-color-darken font-xs"></i> DemoUrl </th>
+                                        <th><i class="fa fa-fw fa-calendar text-muted hidden-md hidden-sm hidden-xs"></i> Production</th>
+                                        <th><i class="fa fa-fw fa-calendar text-muted hidden-md hidden-sm hidden-xs"></i> Description</th>
+                                        <th>Action</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr data-ng-repeat="proj in ProjectList">
+                                        <td>{{proj.ProjectTitle}}</td>
+                                        <td>{{proj.ProjectTech}}</td>
+                                        <td>{{proj.ClientInfo}}</td>
+                                        <td>{{proj.Status}}</td>
+                                        <td>{{proj.DemoUrl}}</td>
+                                        <td>{{proj.ProductionUrl}}</td>
+                                        <td>{{proj.Description}}</td>
+                                        <td><a href="/Agile/Project/EditProject/{{proj.ProjectID}}">Edit</a></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <!-- end widget content -->
+                    </div>
+                    <!-- end widget div -->
+                </div>
+                <!-- end widget -->
+            </article>
+            <!-- WIDGET END -->
+        </div>
+        <!-- end row -->
+        <!-- row -->
+        <div class="row">
+            <!-- a blank row to get started -->
+            <div class="col-sm-12">
+                <!-- your contents here -->
+            </div>
+        </div>
+        <!-- end row -->
+    </section>
+    <!-- end widget grid -->
+</div>
+@section pagespecific {
+<script type="text/javascript">
+    var basePath = '@System.Configuration.ConfigurationManager.AppSettings["BasePath"]'
+</script>
+<script src="~/AgController/Projectjs.js"></script>
+}

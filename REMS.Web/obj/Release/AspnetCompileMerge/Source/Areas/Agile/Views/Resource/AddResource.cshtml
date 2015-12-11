@@ -1,0 +1,55 @@
+﻿
+@{
+    ViewBag.Title = "AddResource";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<script src="~/Scripts/angular.js"></script>
+<script src="~/AgController/NgTran.js"></script>
+<div class="page-header">
+    <h1>  Add Resource </h1>
+</div>
+<div class="panel" data-ng-app="AgileApp" data-ng-controller="AgileController">
+
+    <div class="row">
+        <div class="col-md-1">
+            &nbsp;
+        </div>
+        <div class="col-lg-4">
+            <label for="name">Name</label>
+            <input type="text" class="form-control" placeholder="Enter resource name..." id="txtRName" />
+        </div>
+        <div class="col-lg-4">
+            <label for="contact">Contact</label>
+            <input type="text" class="form-control" placeholder="Enter contact no..." id="txtRContact" />
+        </div>
+
+    </div>
+    <div class="row">
+        <div class="col-md-1">
+            &nbsp;
+        </div>
+        <div class="col-lg-4">
+            <label for="name">Email</label>
+            <input type="text" class="form-control" placeholder="Enter email id..." id="txtREmail" />
+        </div>
+        <div class="col-lg-4">
+            <label for="contact">EmpCode</label>
+            <input type="text" class="form-control" placeholder="Enter employee code..." id="txtEmpCode" />
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-8">
+            &nbsp;
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-10" style="text-align:center;">
+            <input type="button" class="btn btn-default" data-ng-click="AddResource()" value="Submit" id="btnSubmit" />
+        </div>
+    </div>
+</div>
+<script src="~/Scripts/jquery-1.10.2.js"></script>
+<script type="text/javascript">
+    var basePath = '@System.Configuration.ConfigurationManager.AppSettings["BasePath"]'
+</script>

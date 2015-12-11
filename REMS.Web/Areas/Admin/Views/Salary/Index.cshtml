@@ -1,0 +1,161 @@
+﻿@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Index</h2>
+<div>
+    <table>
+
+        <tr>
+            <td>
+                <strong>SYNORIS TECHNOLOGY PVT LTD.</strong>
+            </td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td><strong>Total Month Days</strong></td>
+            <td><input type="text" id="txttotaldays" name="txttotaldays" /> </td>
+        </tr>
+
+        <tr>
+            <td><strong>Pay Slip For:</strong></td>
+            <td>
+                <select id="ddlmonth" name="ddlmonth"></select>
+                <select id="ddlyear" name="ddlyear"></select>
+            </td>
+
+        </tr>
+        <tr>
+            <td>Department</td>
+            <td>
+                <select id="ddldepartment" name="ddldepartment"></select>
+            </td>
+            <td><strong>Name</strong> </td>
+            <td>
+                <select id="ddlemployee" name="ddlemployee"></select>
+            </td>
+            <td><strong>Days worked</strong></td>
+            <td><input type="text" name="txtdaysworked" /></td>
+
+        </tr>
+        <tr>
+            <td><strong>Total Days for salary</strong></td>
+            <td><input type="text" name="txtdaysforsalary" /></td>
+            <td></td>
+            <td><strong>Leave sanctioned</strong> </td>
+            <td><input type="text" id="txtleave" name="txtleave" /> </td>
+
+        </tr>
+
+        <tr>
+            <td><strong>Particulars</strong></td>
+            <td><strong>Earnings</strong></td>
+            <td><strong>Fixed</strong></td>
+            <td><strong>Particulars</strong></td>
+            <td><strong>Deductions</strong></td>
+        </tr>
+        <tr>
+            <td>Basic</td>
+            <td> <input type="text" id="txtbasic_earning" name="txtbasic_earning" /></td>
+            <td><input type="text" id="txtbasic_fixed" name="txtbasic_fixed" /></td>
+            <td>Provident Fund</td>
+            <td><input type="text" id="txtpf" name="txtpf" /></td>
+
+
+        </tr>
+        <tr>
+            <td>House Rent Allowance</td>
+            <td> <input type="text" id="txthouserent_earning" name="txthouserent_earning" /></td>
+            <td><input type="text" id="txthouserent_fixed" name="txthouserent_fixed" /></td>
+            <td>E.S.I.C</td>
+            <td><input type="text" id="txtesic" name="txtesic" /></td>
+
+
+        </tr>
+
+        <tr>
+            <td>Converyance Allowance</td>
+            <td><input type="text" name="txtconveryance_earning" id="txtconveryance_earning" /></td>
+            <td><input type="text" name="txtconveryance_fixed" id="txtconveryance_fixed" /></td>
+            <td>Professional Tax</td>
+            <td><input type="text" name="txtProfessionaltax" id="txtProfessionaltax" /></td>
+        </tr>
+        <tr>
+            <td>Incentive</td>
+            <td><input type="text" name="txtincentive_earning" id="txtincentive_earning" /></td>
+            <td><input type="text" name="txtincentive_fixed" id="txtincentive_fixed" /></td>
+            <td>TDS</td>
+            <td><input type="text" name="txttds" id="txttds" /></td>
+        </tr>
+        <tr>
+            <td>Other Allowance 1</td>
+            <td><input type="text" id="txtoa1_earning" name="txtoa1_earning" /></td>
+            <td><input type="text" id="txtoa1_fixed" name="txtoa1_fixed" /></td>
+            <td>Lunch</td>
+            <td><input type="text" name="txtlunch" id="txtlunch" /></td>
+        </tr>
+
+        <tr>
+            <td>Other Allowance 2</td>
+            <td><input type="text" id="txtoa2_earning" name="txtoa2_earning" /></td>
+            <td><input type="text" id="txtoa2_fixed" name="txtoa2_fixed" /></td>
+            <td>Advance Loan</td>
+            <td><input type="text" name="txtadvanceloan" id="txtadvanceloan" /></td>
+        </tr>
+
+        <tr>
+            <td>Other Allowance 3</td>
+            <td><input type="text" id="txtoa3_earning" name="txtoa3_earning" /></td>
+            <td><input type="text" id="txtoa3_fixed" name="txtoa3_fixed" /></td>
+            <td></td>
+            <td></td>
+        </tr>
+
+        <tr>
+            <td>Special Performance Incentive</td>
+            <td><input type="text" id="txtspecial_earning" name="txtspecial_earning" /></td>
+            <td><input type="text" id="txtspecial_fixed" name="txtspecial_fixed" /></td>
+            <td></td>
+            <td></td>
+        </tr>
+
+        <tr>
+            <td><strong>Gross Pay</strong></td>
+            <td>
+                <strong>
+                    <input type="text" name="txtgrosspay_earning" id="txtgrosspay_earning" />
+                </strong>
+            </td>
+            <td>
+                <input type="text" name="txtgrosspay_fixed" id="txtgrosspay_fixed" />
+            </td>
+
+            <td>
+                <strong>Total Deduction</strong>
+            </td>
+            <td><input type="text" name="txtdeduction" id="txtdeduction" /></td>
+        </tr>
+
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td><strong>Net Pay</strong> </td>
+            <td>
+                <strong>
+                    <input type="text" name="txtnetpay" id="txtnetpay" />
+                </strong>
+            </td>
+        </tr>
+        <tr>
+
+            <td><input type="submit" value="SUBMIT" /> </td>
+            <td><input type="button" value="CANCEL" /> </td>
+        </tr>
+    </table>
+
+
+</div>

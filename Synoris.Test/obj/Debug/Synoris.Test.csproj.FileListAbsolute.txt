@@ -1,0 +1,10 @@
+D:\Projects\REMS\Synoris.Test\bin\Debug\Synoris.Test.dll
+D:\Projects\REMS\Synoris.Test\bin\Debug\Synoris.Test.pdb
+D:\Projects\REMS\Synoris.Test\obj\Debug\Synoris.Test.csprojResolveAssemblyReference.cache
+D:\Projects\REMS\Synoris.Test\obj\Debug\Synoris.Test.dll
+D:\Projects\REMS\Synoris.Test\obj\Debug\Synoris.Test.pdb
+C:\Users\Rohan\Desktop\SynorisProject\Synoris.Test\bin\Debug\Synoris.Test.dll
+C:\Users\Rohan\Desktop\SynorisProject\Synoris.Test\bin\Debug\Synoris.Test.pdb
+C:\Users\Rohan\Desktop\SynorisProject\Synoris.Test\obj\Debug\Synoris.Test.csprojResolveAssemblyReference.cache
+C:\Users\Rohan\Desktop\SynorisProject\Synoris.Test\obj\Debug\Synoris.Test.dll
+C:\Users\Rohan\Desktop\SynorisProject\Synoris.Test\obj\Debug\Synoris.Test.pdb

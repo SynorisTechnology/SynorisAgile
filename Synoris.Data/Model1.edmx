@@ -1,0 +1,866 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="SynoProjectDBModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'SynoProjectDB.dbo.__MigrationHistory' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="__MigrationHistory">
+          <Key>
+            <PropertyRef Name="MigrationId" />
+            <PropertyRef Name="ContextKey" />
+            <PropertyRef Name="Model" />
+            <PropertyRef Name="ProductVersion" />
+          </Key>
+          <Property Name="MigrationId" Type="nvarchar" MaxLength="150" Nullable="false" />
+          <Property Name="ContextKey" Type="nvarchar" MaxLength="300" Nullable="false" />
+          <Property Name="Model" Type="varbinary(max)" Nullable="false" />
+          <Property Name="ProductVersion" Type="nvarchar" MaxLength="32" Nullable="false" />
+        </EntityType>
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'SynoProjectDB.dbo.AspNetRoles' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="AspNetRoles">
+          <Key>
+            <PropertyRef Name="Id" />
+            <PropertyRef Name="Name" />
+          </Key>
+          <Property Name="Id" Type="nvarchar" MaxLength="128" Nullable="false" />
+          <Property Name="Name" Type="nvarchar" MaxLength="256" Nullable="false" />
+        </EntityType>
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'SynoProjectDB.dbo.AspNetUserClaims' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="AspNetUserClaims">
+          <Key>
+            <PropertyRef Name="Id" />
+            <PropertyRef Name="UserId" />
+          </Key>
+          <Property Name="Id" Type="int" Nullable="false" />
+          <Property Name="UserId" Type="nvarchar" MaxLength="128" Nullable="false" />
+          <Property Name="ClaimType" Type="nvarchar(max)" />
+          <Property Name="ClaimValue" Type="nvarchar(max)" />
+        </EntityType>
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'SynoProjectDB.dbo.AspNetUserLogins' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="AspNetUserLogins">
+          <Key>
+            <PropertyRef Name="LoginProvider" />
+            <PropertyRef Name="ProviderKey" />
+            <PropertyRef Name="UserId" />
+          </Key>
+          <Property Name="LoginProvider" Type="nvarchar" MaxLength="128" Nullable="false" />
+          <Property Name="ProviderKey" Type="nvarchar" MaxLength="128" Nullable="false" />
+          <Property Name="UserId" Type="nvarchar" MaxLength="128" Nullable="false" />
+        </EntityType>
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'SynoProjectDB.dbo.AspNetUserRoles' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="AspNetUserRoles">
+          <Key>
+            <PropertyRef Name="UserId" />
+            <PropertyRef Name="RoleId" />
+          </Key>
+          <Property Name="UserId" Type="nvarchar" MaxLength="128" Nullable="false" />
+          <Property Name="RoleId" Type="nvarchar" MaxLength="128" Nullable="false" />
+        </EntityType>
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'SynoProjectDB.dbo.AspNetUsers' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="AspNetUsers">
+          <Key>
+            <PropertyRef Name="Id" />
+            <PropertyRef Name="EmailConfirmed" />
+            <PropertyRef Name="PhoneNumberConfirmed" />
+            <PropertyRef Name="TwoFactorEnabled" />
+            <PropertyRef Name="LockoutEnabled" />
+            <PropertyRef Name="AccessFailedCount" />
+            <PropertyRef Name="UserName" />
+          </Key>
+          <Property Name="Id" Type="nvarchar" MaxLength="128" Nullable="false" />
+          <Property Name="Email" Type="nvarchar" MaxLength="256" />
+          <Property Name="EmailConfirmed" Type="bit" Nullable="false" />
+          <Property Name="PasswordHash" Type="nvarchar(max)" />
+          <Property Name="SecurityStamp" Type="nvarchar(max)" />
+          <Property Name="PhoneNumber" Type="nvarchar(max)" />
+          <Property Name="PhoneNumberConfirmed" Type="bit" Nullable="false" />
+          <Property Name="TwoFactorEnabled" Type="bit" Nullable="false" />
+          <Property Name="LockoutEndDateUtc" Type="smalldatetime" />
+          <Property Name="LockoutEnabled" Type="bit" Nullable="false" />
+          <Property Name="AccessFailedCount" Type="int" Nullable="false" />
+          <Property Name="UserName" Type="nvarchar" MaxLength="256" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Contact">
+          <Key>
+            <PropertyRef Name="ContactID" />
+          </Key>
+          <Property Name="ContactID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="ContactADDRESS" Type="varchar" MaxLength="250" />
+          <Property Name="SkypeID" Type="varchar" MaxLength="70" />
+          <Property Name="EmailID" Type="varchar" MaxLength="250" />
+          <Property Name="ContactPersonNo" Type="varchar" MaxLength="250" />
+          <Property Name="CompanyName" Type="varchar" MaxLength="50" />
+          <Property Name="ProjectTitle" Type="varchar" MaxLength="100" />
+        </EntityType>
+        <EntityType Name="Department">
+          <Key>
+            <PropertyRef Name="DepartmentId" />
+          </Key>
+          <Property Name="DepartmentName" Type="nvarchar" MaxLength="50" />
+          <Property Name="DepartmentId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Error">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="ErrorDate" Type="datetime" />
+          <Property Name="IpAddress" Type="nvarchar" MaxLength="40" />
+          <Property Name="UserAgent" Type="nvarchar(max)" />
+          <Property Name="Exception" Type="nvarchar(max)" />
+          <Property Name="Message" Type="nvarchar(max)" />
+          <Property Name="Everything" Type="nvarchar(max)" />
+          <Property Name="HttpReferer" Type="nvarchar" MaxLength="500" />
+          <Property Name="PathAndQuery" Type="nvarchar" MaxLength="500" />
+          <Property Name="CreatedBy" Type="int" />
+          <Property Name="CreatedOn" Type="datetime" Nullable="false" />
+          <Property Name="ChangedBy" Type="int" />
+          <Property Name="ChangedOn" Type="datetime" Nullable="false" />
+          <Property Name="FullURL" Type="nvarchar" MaxLength="500" />
+          <Property Name="UserName" Type="nvarchar" MaxLength="50" />
+          <Property Name="ErrorID" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="Interview">
+          <Key>
+            <PropertyRef Name="InterviewID" />
+          </Key>
+          <Property Name="InterviewID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="CandidateName" Type="varchar" MaxLength="100" />
+          <Property Name="Phone" Type="varchar" MaxLength="18" />
+          <Property Name="JobForApply" Type="varchar" MaxLength="255" />
+          <Property Name="JobPortal" Type="varchar" MaxLength="255" />
+          <Property Name="InterviewDate" Type="smalldatetime" />
+          <Property Name="Time" Type="varchar" MaxLength="18" />
+          <Property Name="CurrentCTC" Type="money" />
+          <Property Name="Experience" Type="varchar" MaxLength="50" />
+          <Property Name="Feedback" Type="varchar" MaxLength="255" />
+        </EntityType>
+        <EntityType Name="Payslip">
+          <Key>
+            <PropertyRef Name="PayslipID" />
+          </Key>
+          <Property Name="ResourceID" Type="int" />
+          <Property Name="Paymonth" Type="nvarchar" MaxLength="20" />
+          <Property Name="Payyear" Type="int" />
+          <Property Name="TotalDays" Type="int" />
+          <Property Name="Daysworked" Type="float" />
+          <Property Name="TotalDaysforSalary" Type="float" />
+          <Property Name="Leave" Type="float" />
+          <Property Name="Basic_earnings" Type="int" />
+          <Property Name="Baisc_fixed" Type="int" />
+          <Property Name="provident_fund" Type="int" />
+          <Property Name="HouseRent_earning" Type="int" />
+          <Property Name="HouseRent_Fixed" Type="int" />
+          <Property Name="Esic" Type="int" />
+          <Property Name="Con_Allowance_earning" Type="int" />
+          <Property Name="Con_Allowance_fixed" Type="int" />
+          <Property Name="ProfessionalTax" Type="int" />
+          <Property Name="Incentive_earning" Type="int" />
+          <Property Name="Incentive_Fixed" Type="int" />
+          <Property Name="Tds" Type="int" />
+          <Property Name="OA1_earning" Type="int" />
+          <Property Name="OA1_fixed" Type="int" />
+          <Property Name="Lunch" Type="int" />
+          <Property Name="OA2_earning" Type="int" />
+          <Property Name="OA2_fixed" Type="int" />
+          <Property Name="Advanceloan" Type="int" />
+          <Property Name="OA3_earning" Type="int" />
+          <Property Name="OA3_fixed" Type="int" />
+          <Property Name="Specialperformance_earning" Type="int" />
+          <Property Name="Specialperformance_Fixed" Type="int" />
+          <Property Name="Grosspay_earning" Type="int" />
+          <Property Name="Grosspay_fixed" Type="int" />
+          <Property Name="Totaldeduction" Type="int" />
+          <Property Name="Netpay" Type="int" />
+          <Property Name="Date1" Type="datetime" />
+          <Property Name="PayslipID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="DepartmentId" Type="int" />
+        </EntityType>
+        <EntityType Name="Project">
+          <Key>
+            <PropertyRef Name="ProjectID" />
+          </Key>
+          <Property Name="ProjectID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="ProjectTitle" Type="nvarchar" MaxLength="256" />
+          <Property Name="Description" Type="text" />
+          <Property Name="StartDate" Type="smalldatetime" />
+          <Property Name="EndDate" Type="smalldatetime" />
+          <Property Name="Status" Type="nvarchar" MaxLength="50" />
+          <Property Name="Tracker" Type="bit" />
+          <Property Name="DeadLine" Type="smalldatetime" />
+          <Property Name="BitBucketUrl" Type="nvarchar" MaxLength="500" />
+          <Property Name="SVN" Type="nvarchar" MaxLength="500" />
+          <Property Name="ClientInfo" Type="text" />
+          <Property Name="ProjectPassword" Type="nvarchar" MaxLength="500" />
+          <Property Name="Targated" Type="int" />
+          <Property Name="Budget" Type="money" />
+          <Property Name="DemoUrl" Type="nvarchar" MaxLength="256" />
+          <Property Name="ProductionUrl" Type="nvarchar" MaxLength="256" />
+          <Property Name="ProjectTech" Type="text" />
+        </EntityType>
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'SynoProjectDB.dbo.ProjectResource' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="ProjectResource">
+          <Key>
+            <PropertyRef Name="ProjectResourceID" />
+          </Key>
+          <Property Name="ProjectResourceID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="ProjectID" Type="int" />
+          <Property Name="ResourceID" Type="int" />
+          <Property Name="Status" Type="bit" />
+          <Property Name="AssignDate" Type="smalldatetime" />
+          <Property Name="AssignBy" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="Resource">
+          <Key>
+            <PropertyRef Name="ResourceID" />
+          </Key>
+          <Property Name="ResourceID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Name" Type="nvarchar" MaxLength="256" />
+          <Property Name="ContactNo" Type="nvarchar" MaxLength="50" />
+          <Property Name="EmailID" Type="nvarchar" MaxLength="256" />
+          <Property Name="EmpCode" Type="nvarchar" MaxLength="50" />
+          <Property Name="CrDate" Type="smalldatetime" />
+          <Property Name="CrBy" Type="nvarchar" MaxLength="50" />
+          <Property Name="DepartmentId" Type="int" />
+        </EntityType>
+        <Association Name="DepartmentId">
+          <End Role="Department" Type="Self.Department" Multiplicity="0..1" />
+          <End Role="Payslip" Type="Self.Payslip" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Department">
+              <PropertyRef Name="DepartmentId" />
+            </Principal>
+            <Dependent Role="Payslip">
+              <PropertyRef Name="DepartmentId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="DepartmentId1">
+          <End Role="Department" Type="Self.Department" Multiplicity="0..1" />
+          <End Role="Resource" Type="Self.Resource" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Department">
+              <PropertyRef Name="DepartmentId" />
+            </Principal>
+            <Dependent Role="Resource">
+              <PropertyRef Name="DepartmentId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="SynoProjectDBModelStoreContainer">
+          <EntitySet Name="Contact" EntityType="Self.Contact" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Department" EntityType="Self.Department" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Error" EntityType="Self.Error" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Interview" EntityType="Self.Interview" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Payslip" EntityType="Self.Payslip" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Project" EntityType="Self.Project" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Resource" EntityType="Self.Resource" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="__MigrationHistory" EntityType="Self.__MigrationHistory" store:Type="Tables" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [__MigrationHistory].[MigrationId] AS [MigrationId], 
+    [__MigrationHistory].[ContextKey] AS [ContextKey], 
+    [__MigrationHistory].[Model] AS [Model], 
+    [__MigrationHistory].[ProductVersion] AS [ProductVersion]
+    FROM [dbo].[__MigrationHistory] AS [__MigrationHistory]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="AspNetRoles" EntityType="Self.AspNetRoles" store:Type="Tables" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [AspNetRoles].[Id] AS [Id], 
+    [AspNetRoles].[Name] AS [Name]
+    FROM [dbo].[AspNetRoles] AS [AspNetRoles]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="AspNetUserClaims" EntityType="Self.AspNetUserClaims" store:Type="Tables" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [AspNetUserClaims].[Id] AS [Id], 
+    [AspNetUserClaims].[UserId] AS [UserId], 
+    [AspNetUserClaims].[ClaimType] AS [ClaimType], 
+    [AspNetUserClaims].[ClaimValue] AS [ClaimValue]
+    FROM [dbo].[AspNetUserClaims] AS [AspNetUserClaims]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="AspNetUserLogins" EntityType="Self.AspNetUserLogins" store:Type="Tables" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [AspNetUserLogins].[LoginProvider] AS [LoginProvider], 
+    [AspNetUserLogins].[ProviderKey] AS [ProviderKey], 
+    [AspNetUserLogins].[UserId] AS [UserId]
+    FROM [dbo].[AspNetUserLogins] AS [AspNetUserLogins]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="AspNetUserRoles" EntityType="Self.AspNetUserRoles" store:Type="Tables" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [AspNetUserRoles].[UserId] AS [UserId], 
+    [AspNetUserRoles].[RoleId] AS [RoleId]
+    FROM [dbo].[AspNetUserRoles] AS [AspNetUserRoles]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="AspNetUsers" EntityType="Self.AspNetUsers" store:Type="Tables" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [AspNetUsers].[Id] AS [Id], 
+    [AspNetUsers].[Email] AS [Email], 
+    [AspNetUsers].[EmailConfirmed] AS [EmailConfirmed], 
+    [AspNetUsers].[PasswordHash] AS [PasswordHash], 
+    [AspNetUsers].[SecurityStamp] AS [SecurityStamp], 
+    [AspNetUsers].[PhoneNumber] AS [PhoneNumber], 
+    [AspNetUsers].[PhoneNumberConfirmed] AS [PhoneNumberConfirmed], 
+    [AspNetUsers].[TwoFactorEnabled] AS [TwoFactorEnabled], 
+    [AspNetUsers].[LockoutEndDateUtc] AS [LockoutEndDateUtc], 
+    [AspNetUsers].[LockoutEnabled] AS [LockoutEnabled], 
+    [AspNetUsers].[AccessFailedCount] AS [AccessFailedCount], 
+    [AspNetUsers].[UserName] AS [UserName]
+    FROM [dbo].[AspNetUsers] AS [AspNetUsers]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="ProjectResource" EntityType="Self.ProjectResource" store:Type="Tables" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [ProjectResource].[ProjectResourceID] AS [ProjectResourceID], 
+    [ProjectResource].[ProjectID] AS [ProjectID], 
+    [ProjectResource].[ResourceID] AS [ResourceID], 
+    [ProjectResource].[Status] AS [Status], 
+    [ProjectResource].[AssignDate] AS [AssignDate], 
+    [ProjectResource].[AssignBy] AS [AssignBy]
+    FROM [dbo].[ProjectResource] AS [ProjectResource]</DefiningQuery>
+          </EntitySet>
+          <AssociationSet Name="DepartmentId" Association="Self.DepartmentId">
+            <End Role="Department" EntitySet="Department" />
+            <End Role="Payslip" EntitySet="Payslip" />
+          </AssociationSet>
+          <AssociationSet Name="DepartmentId1" Association="Self.DepartmentId1">
+            <End Role="Department" EntitySet="Department" />
+            <End Role="Resource" EntitySet="Resource" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="SynoProjectDBModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityContainer Name="SynoProjectDBEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="ProjectResources" EntityType="SynoProjectDBModel.ProjectResource" />
+          <EntitySet Name="Resources" EntityType="SynoProjectDBModel.Resource" />
+          <AssociationSet Name="FK_ProjectResource_Resource" Association="SynoProjectDBModel.FK_ProjectResource_Resource">
+            <End Role="Resource" EntitySet="Resources" />
+            <End Role="ProjectResource" EntitySet="ProjectResources" />
+          </AssociationSet>
+          <EntitySet Name="Projects" EntityType="SynoProjectDBModel.Project" />
+          <EntitySet Name="C__MigrationHistory" EntityType="SynoProjectDBModel.C__MigrationHistory" />
+          <EntitySet Name="AspNetRoles" EntityType="SynoProjectDBModel.AspNetRole" />
+          <EntitySet Name="AspNetUserClaims" EntityType="SynoProjectDBModel.AspNetUserClaim" />
+          <EntitySet Name="AspNetUserLogins" EntityType="SynoProjectDBModel.AspNetUserLogin" />
+          <EntitySet Name="AspNetUserRoles" EntityType="SynoProjectDBModel.AspNetUserRole" />
+          <EntitySet Name="AspNetUsers" EntityType="SynoProjectDBModel.AspNetUser" />
+          <EntitySet Name="Departments" EntityType="SynoProjectDBModel.Department" />
+          <EntitySet Name="Payslips" EntityType="SynoProjectDBModel.Payslip" />
+          <AssociationSet Name="DepartmentId" Association="SynoProjectDBModel.DepartmentId">
+            <End Role="Department" EntitySet="Departments" />
+            <End Role="Payslip" EntitySet="Payslips" />
+          </AssociationSet>
+          <AssociationSet Name="DepartmentId1" Association="SynoProjectDBModel.DepartmentId1">
+            <End Role="Department" EntitySet="Departments" />
+            <End Role="Resource" EntitySet="Resources" />
+          </AssociationSet>
+          <EntitySet Name="Errors" EntityType="SynoProjectDBModel.Error" />
+          <EntitySet Name="Contacts" EntityType="SynoProjectDBModel.Contact" />
+          <EntitySet Name="Interviews" EntityType="SynoProjectDBModel.Interview" />
+        </EntityContainer>
+        <EntityType Name="ProjectResource">
+          <Key>
+            <PropertyRef Name="ProjectResourceID" />
+          </Key>
+          <Property Name="ProjectResourceID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="ProjectID" Type="Int32" />
+          <Property Name="ResourceID" Type="Int32" />
+          <Property Name="Status" Type="Boolean" />
+          <Property Name="AssignDate" Type="DateTime" Precision="0" />
+          <Property Name="AssignBy" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="Resource" Relationship="SynoProjectDBModel.FK_ProjectResource_Resource" FromRole="ProjectResource" ToRole="Resource" />
+        </EntityType>
+        <EntityType Name="Resource">
+          <Key>
+            <PropertyRef Name="ResourceID" />
+          </Key>
+          <Property Name="ResourceID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="String" MaxLength="256" FixedLength="false" Unicode="true" />
+          <Property Name="ContactNo" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="EmailID" Type="String" MaxLength="256" FixedLength="false" Unicode="true" />
+          <Property Name="EmpCode" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="CrDate" Type="DateTime" Precision="0" />
+          <Property Name="CrBy" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="ProjectResources" Relationship="SynoProjectDBModel.FK_ProjectResource_Resource" FromRole="Resource" ToRole="ProjectResource" />
+          <Property Name="DepartmentId" Type="Int32" />
+          <NavigationProperty Name="Department" Relationship="SynoProjectDBModel.DepartmentId1" FromRole="Resource" ToRole="Department" />
+        </EntityType>
+        <Association Name="FK_ProjectResource_Resource">
+          <End Type="SynoProjectDBModel.Resource" Role="Resource" Multiplicity="0..1" />
+          <End Type="SynoProjectDBModel.ProjectResource" Role="ProjectResource" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Resource">
+              <PropertyRef Name="ResourceID" />
+            </Principal>
+            <Dependent Role="ProjectResource">
+              <PropertyRef Name="ResourceID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityType Name="Project">
+          <Key>
+            <PropertyRef Name="ProjectID" />
+          </Key>
+          <Property Name="ProjectID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="ProjectTitle" Type="String" MaxLength="256" FixedLength="false" Unicode="true" />
+          <Property Name="Description" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="StartDate" Type="DateTime" Precision="0" />
+          <Property Name="EndDate" Type="DateTime" Precision="0" />
+          <Property Name="Status" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Tracker" Type="Boolean" />
+          <Property Name="DeadLine" Type="DateTime" Precision="0" />
+          <Property Name="BitBucketUrl" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="SVN" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="ClientInfo" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="ProjectPassword" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="Targated" Type="Int32" />
+          <Property Name="Budget" Type="Decimal" Precision="19" Scale="4" />
+          <Property Name="DemoUrl" Type="String" MaxLength="256" FixedLength="false" Unicode="true" />
+          <Property Name="ProductionUrl" Type="String" MaxLength="256" FixedLength="false" Unicode="true" />
+          <Property Name="ProjectTech" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="C__MigrationHistory">
+          <Key>
+            <PropertyRef Name="MigrationId" />
+            <PropertyRef Name="ContextKey" />
+            <PropertyRef Name="Model" />
+            <PropertyRef Name="ProductVersion" />
+          </Key>
+          <Property Name="MigrationId" Type="String" Nullable="false" MaxLength="150" FixedLength="false" Unicode="true" />
+          <Property Name="ContextKey" Type="String" Nullable="false" MaxLength="300" FixedLength="false" Unicode="true" />
+          <Property Name="Model" Type="Binary" Nullable="false" MaxLength="Max" FixedLength="false" />
+          <Property Name="ProductVersion" Type="String" Nullable="false" MaxLength="32" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="AspNetRole">
+          <Key>
+            <PropertyRef Name="Id" />
+            <PropertyRef Name="Name" />
+          </Key>
+          <Property Name="Id" Type="String" Nullable="false" MaxLength="128" FixedLength="false" Unicode="true" />
+          <Property Name="Name" Type="String" Nullable="false" MaxLength="256" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="AspNetUserClaim">
+          <Key>
+            <PropertyRef Name="Id" />
+            <PropertyRef Name="UserId" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" />
+          <Property Name="UserId" Type="String" Nullable="false" MaxLength="128" FixedLength="false" Unicode="true" />
+          <Property Name="ClaimType" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="ClaimValue" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="AspNetUserLogin">
+          <Key>
+            <PropertyRef Name="LoginProvider" />
+            <PropertyRef Name="ProviderKey" />
+            <PropertyRef Name="UserId" />
+          </Key>
+          <Property Name="LoginProvider" Type="String" Nullable="false" MaxLength="128" FixedLength="false" Unicode="true" />
+          <Property Name="ProviderKey" Type="String" Nullable="false" MaxLength="128" FixedLength="false" Unicode="true" />
+          <Property Name="UserId" Type="String" Nullable="false" MaxLength="128" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="AspNetUserRole">
+          <Key>
+            <PropertyRef Name="UserId" />
+            <PropertyRef Name="RoleId" />
+          </Key>
+          <Property Name="UserId" Type="String" Nullable="false" MaxLength="128" FixedLength="false" Unicode="true" />
+          <Property Name="RoleId" Type="String" Nullable="false" MaxLength="128" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="AspNetUser">
+          <Key>
+            <PropertyRef Name="Id" />
+            <PropertyRef Name="EmailConfirmed" />
+            <PropertyRef Name="PhoneNumberConfirmed" />
+            <PropertyRef Name="TwoFactorEnabled" />
+            <PropertyRef Name="LockoutEnabled" />
+            <PropertyRef Name="AccessFailedCount" />
+            <PropertyRef Name="UserName" />
+          </Key>
+          <Property Name="Id" Type="String" Nullable="false" MaxLength="128" FixedLength="false" Unicode="true" />
+          <Property Name="Email" Type="String" MaxLength="256" FixedLength="false" Unicode="true" />
+          <Property Name="EmailConfirmed" Type="Boolean" Nullable="false" />
+          <Property Name="PasswordHash" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="SecurityStamp" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="PhoneNumber" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="PhoneNumberConfirmed" Type="Boolean" Nullable="false" />
+          <Property Name="TwoFactorEnabled" Type="Boolean" Nullable="false" />
+          <Property Name="LockoutEndDateUtc" Type="DateTime" Precision="0" />
+          <Property Name="LockoutEnabled" Type="Boolean" Nullable="false" />
+          <Property Name="AccessFailedCount" Type="Int32" Nullable="false" />
+          <Property Name="UserName" Type="String" Nullable="false" MaxLength="256" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="Department">
+          <Key>
+            <PropertyRef Name="DepartmentId" />
+          </Key>
+          <Property Name="DepartmentName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="DepartmentId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <NavigationProperty Name="Payslips" Relationship="SynoProjectDBModel.DepartmentId" FromRole="Department" ToRole="Payslip" />
+          <NavigationProperty Name="Resources" Relationship="SynoProjectDBModel.DepartmentId1" FromRole="Department" ToRole="Resource" />
+        </EntityType>
+        <EntityType Name="Payslip">
+          <Key>
+            <PropertyRef Name="PayslipID" />
+          </Key>
+          <Property Name="ResourceID" Type="Int32" />
+          <Property Name="Paymonth" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="Payyear" Type="Int32" />
+          <Property Name="TotalDays" Type="Int32" />
+          <Property Name="Daysworked" Type="Double" />
+          <Property Name="TotalDaysforSalary" Type="Int32" />
+          <Property Name="Leave" Type="Int32" />
+          <Property Name="Basic_earnings" Type="Int32" />
+          <Property Name="Baisc_fixed" Type="Int32" />
+          <Property Name="provident_fund" Type="Int32" />
+          <Property Name="HouseRent_earning" Type="Int32" />
+          <Property Name="HouseRent_Fixed" Type="Int32" />
+          <Property Name="Esic" Type="Int32" />
+          <Property Name="Con_Allowance_earning" Type="Int32" />
+          <Property Name="Con_Allowance_fixed" Type="Int32" />
+          <Property Name="ProfessionalTax" Type="Int32" />
+          <Property Name="Incentive_earning" Type="Int32" />
+          <Property Name="Incentive_Fixed" Type="Int32" />
+          <Property Name="Tds" Type="Int32" />
+          <Property Name="OA1_earning" Type="Int32" />
+          <Property Name="OA1_fixed" Type="Int32" />
+          <Property Name="Lunch" Type="Int32" />
+          <Property Name="OA2_earning" Type="Int32" />
+          <Property Name="OA2_fixed" Type="Int32" />
+          <Property Name="Advanceloan" Type="Int32" />
+          <Property Name="OA3_earning" Type="Int32" />
+          <Property Name="OA3_fixed" Type="Int32" />
+          <Property Name="Specialperformance_earning" Type="Int32" />
+          <Property Name="Specialperformance_Fixed" Type="Int32" />
+          <Property Name="Grosspay_earning" Type="Int32" />
+          <Property Name="Grosspay_fixed" Type="Int32" />
+          <Property Name="Totaldeduction" Type="Int32" />
+          <Property Name="Netpay" Type="Int32" />
+          <Property Name="Date1" Type="DateTime" Precision="3" />
+          <Property Name="PayslipID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="DepartmentId" Type="Int32" />
+          <NavigationProperty Name="Department" Relationship="SynoProjectDBModel.DepartmentId" FromRole="Payslip" ToRole="Department" />
+        </EntityType>
+        <Association Name="DepartmentId">
+          <End Type="SynoProjectDBModel.Department" Role="Department" Multiplicity="0..1" />
+          <End Type="SynoProjectDBModel.Payslip" Role="Payslip" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Department">
+              <PropertyRef Name="DepartmentId" />
+            </Principal>
+            <Dependent Role="Payslip">
+              <PropertyRef Name="DepartmentId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="DepartmentId1">
+          <End Type="SynoProjectDBModel.Department" Role="Department" Multiplicity="0..1" />
+          <End Type="SynoProjectDBModel.Resource" Role="Resource" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Department">
+              <PropertyRef Name="DepartmentId" />
+            </Principal>
+            <Dependent Role="Resource">
+              <PropertyRef Name="DepartmentId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityType Name="Error">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="ErrorDate" Type="DateTime" Precision="3" />
+          <Property Name="IpAddress" Type="String" MaxLength="40" FixedLength="false" Unicode="true" />
+          <Property Name="UserAgent" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Exception" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Message" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Everything" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="HttpReferer" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="PathAndQuery" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="CreatedBy" Type="Int32" />
+          <Property Name="CreatedOn" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="ChangedBy" Type="Int32" />
+          <Property Name="ChangedOn" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="FullURL" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="UserName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="ErrorID" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="Contact">
+          <Key>
+            <PropertyRef Name="ContactID" />
+          </Key>
+          <Property Name="ContactID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="ContactADDRESS" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+          <Property Name="SkypeID" Type="String" MaxLength="70" FixedLength="false" Unicode="false" />
+          <Property Name="EmailID" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+          <Property Name="ContactPersonNo" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+          <Property Name="CompanyName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="ProjectTitle" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="Interview">
+          <Key>
+            <PropertyRef Name="InterviewID" />
+          </Key>
+          <Property Name="InterviewID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="CandidateName" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="Phone" Type="String" MaxLength="18" FixedLength="false" Unicode="false" />
+          <Property Name="JobForApply" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="JobPortal" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="InterviewDate" Type="DateTime" Precision="0" />
+          <Property Name="Time" Type="String" MaxLength="18" FixedLength="false" Unicode="false" />
+          <Property Name="CurrentCTC" Type="Decimal" Precision="19" Scale="4" />
+          <Property Name="Experience" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Feedback" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+        </EntityType>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="SynoProjectDBModelStoreContainer" CdmEntityContainer="SynoProjectDBEntities">
+          <EntitySetMapping Name="ProjectResources">
+            <EntityTypeMapping TypeName="SynoProjectDBModel.ProjectResource">
+              <MappingFragment StoreEntitySet="ProjectResource">
+                <ScalarProperty Name="AssignBy" ColumnName="AssignBy" />
+                <ScalarProperty Name="AssignDate" ColumnName="AssignDate" />
+                <ScalarProperty Name="Status" ColumnName="Status" />
+                <ScalarProperty Name="ResourceID" ColumnName="ResourceID" />
+                <ScalarProperty Name="ProjectID" ColumnName="ProjectID" />
+                <ScalarProperty Name="ProjectResourceID" ColumnName="ProjectResourceID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Resources">
+            <EntityTypeMapping TypeName="SynoProjectDBModel.Resource">
+              <MappingFragment StoreEntitySet="Resource">
+                <ScalarProperty Name="DepartmentId" ColumnName="DepartmentId" />
+                <ScalarProperty Name="CrBy" ColumnName="CrBy" />
+                <ScalarProperty Name="CrDate" ColumnName="CrDate" />
+                <ScalarProperty Name="EmpCode" ColumnName="EmpCode" />
+                <ScalarProperty Name="EmailID" ColumnName="EmailID" />
+                <ScalarProperty Name="ContactNo" ColumnName="ContactNo" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="ResourceID" ColumnName="ResourceID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Projects">
+            <EntityTypeMapping TypeName="SynoProjectDBModel.Project">
+              <MappingFragment StoreEntitySet="Project">
+                <ScalarProperty Name="ProjectTech" ColumnName="ProjectTech" />
+                <ScalarProperty Name="ProductionUrl" ColumnName="ProductionUrl" />
+                <ScalarProperty Name="DemoUrl" ColumnName="DemoUrl" />
+                <ScalarProperty Name="Budget" ColumnName="Budget" />
+                <ScalarProperty Name="Targated" ColumnName="Targated" />
+                <ScalarProperty Name="ProjectPassword" ColumnName="ProjectPassword" />
+                <ScalarProperty Name="ClientInfo" ColumnName="ClientInfo" />
+                <ScalarProperty Name="SVN" ColumnName="SVN" />
+                <ScalarProperty Name="BitBucketUrl" ColumnName="BitBucketUrl" />
+                <ScalarProperty Name="DeadLine" ColumnName="DeadLine" />
+                <ScalarProperty Name="Tracker" ColumnName="Tracker" />
+                <ScalarProperty Name="Status" ColumnName="Status" />
+                <ScalarProperty Name="EndDate" ColumnName="EndDate" />
+                <ScalarProperty Name="StartDate" ColumnName="StartDate" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="ProjectTitle" ColumnName="ProjectTitle" />
+                <ScalarProperty Name="ProjectID" ColumnName="ProjectID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="C__MigrationHistory">
+            <EntityTypeMapping TypeName="SynoProjectDBModel.C__MigrationHistory">
+              <MappingFragment StoreEntitySet="__MigrationHistory">
+                <ScalarProperty Name="ProductVersion" ColumnName="ProductVersion" />
+                <ScalarProperty Name="Model" ColumnName="Model" />
+                <ScalarProperty Name="ContextKey" ColumnName="ContextKey" />
+                <ScalarProperty Name="MigrationId" ColumnName="MigrationId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="AspNetRoles">
+            <EntityTypeMapping TypeName="SynoProjectDBModel.AspNetRole">
+              <MappingFragment StoreEntitySet="AspNetRoles">
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="AspNetUserClaims">
+            <EntityTypeMapping TypeName="SynoProjectDBModel.AspNetUserClaim">
+              <MappingFragment StoreEntitySet="AspNetUserClaims">
+                <ScalarProperty Name="ClaimValue" ColumnName="ClaimValue" />
+                <ScalarProperty Name="ClaimType" ColumnName="ClaimType" />
+                <ScalarProperty Name="UserId" ColumnName="UserId" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="AspNetUserLogins">
+            <EntityTypeMapping TypeName="SynoProjectDBModel.AspNetUserLogin">
+              <MappingFragment StoreEntitySet="AspNetUserLogins">
+                <ScalarProperty Name="UserId" ColumnName="UserId" />
+                <ScalarProperty Name="ProviderKey" ColumnName="ProviderKey" />
+                <ScalarProperty Name="LoginProvider" ColumnName="LoginProvider" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="AspNetUserRoles">
+            <EntityTypeMapping TypeName="SynoProjectDBModel.AspNetUserRole">
+              <MappingFragment StoreEntitySet="AspNetUserRoles">
+                <ScalarProperty Name="RoleId" ColumnName="RoleId" />
+                <ScalarProperty Name="UserId" ColumnName="UserId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="AspNetUsers">
+            <EntityTypeMapping TypeName="SynoProjectDBModel.AspNetUser">
+              <MappingFragment StoreEntitySet="AspNetUsers">
+                <ScalarProperty Name="UserName" ColumnName="UserName" />
+                <ScalarProperty Name="AccessFailedCount" ColumnName="AccessFailedCount" />
+                <ScalarProperty Name="LockoutEnabled" ColumnName="LockoutEnabled" />
+                <ScalarProperty Name="LockoutEndDateUtc" ColumnName="LockoutEndDateUtc" />
+                <ScalarProperty Name="TwoFactorEnabled" ColumnName="TwoFactorEnabled" />
+                <ScalarProperty Name="PhoneNumberConfirmed" ColumnName="PhoneNumberConfirmed" />
+                <ScalarProperty Name="PhoneNumber" ColumnName="PhoneNumber" />
+                <ScalarProperty Name="SecurityStamp" ColumnName="SecurityStamp" />
+                <ScalarProperty Name="PasswordHash" ColumnName="PasswordHash" />
+                <ScalarProperty Name="EmailConfirmed" ColumnName="EmailConfirmed" />
+                <ScalarProperty Name="Email" ColumnName="Email" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Departments">
+            <EntityTypeMapping TypeName="SynoProjectDBModel.Department">
+              <MappingFragment StoreEntitySet="Department">
+                <ScalarProperty Name="DepartmentId" ColumnName="DepartmentId" />
+                <ScalarProperty Name="DepartmentName" ColumnName="DepartmentName" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Payslips">
+            <EntityTypeMapping TypeName="SynoProjectDBModel.Payslip">
+              <MappingFragment StoreEntitySet="Payslip">
+                <ScalarProperty Name="DepartmentId" ColumnName="DepartmentId" />
+                <ScalarProperty Name="PayslipID" ColumnName="PayslipID" />
+                <ScalarProperty Name="Date1" ColumnName="Date1" />
+                <ScalarProperty Name="Netpay" ColumnName="Netpay" />
+                <ScalarProperty Name="Totaldeduction" ColumnName="Totaldeduction" />
+                <ScalarProperty Name="Grosspay_fixed" ColumnName="Grosspay_fixed" />
+                <ScalarProperty Name="Grosspay_earning" ColumnName="Grosspay_earning" />
+                <ScalarProperty Name="Specialperformance_Fixed" ColumnName="Specialperformance_Fixed" />
+                <ScalarProperty Name="Specialperformance_earning" ColumnName="Specialperformance_earning" />
+                <ScalarProperty Name="OA3_fixed" ColumnName="OA3_fixed" />
+                <ScalarProperty Name="OA3_earning" ColumnName="OA3_earning" />
+                <ScalarProperty Name="Advanceloan" ColumnName="Advanceloan" />
+                <ScalarProperty Name="OA2_fixed" ColumnName="OA2_fixed" />
+                <ScalarProperty Name="OA2_earning" ColumnName="OA2_earning" />
+                <ScalarProperty Name="Lunch" ColumnName="Lunch" />
+                <ScalarProperty Name="OA1_fixed" ColumnName="OA1_fixed" />
+                <ScalarProperty Name="OA1_earning" ColumnName="OA1_earning" />
+                <ScalarProperty Name="Tds" ColumnName="Tds" />
+                <ScalarProperty Name="Incentive_Fixed" ColumnName="Incentive_Fixed" />
+                <ScalarProperty Name="Incentive_earning" ColumnName="Incentive_earning" />
+                <ScalarProperty Name="ProfessionalTax" ColumnName="ProfessionalTax" />
+                <ScalarProperty Name="Con_Allowance_fixed" ColumnName="Con_Allowance_fixed" />
+                <ScalarProperty Name="Con_Allowance_earning" ColumnName="Con_Allowance_earning" />
+                <ScalarProperty Name="Esic" ColumnName="Esic" />
+                <ScalarProperty Name="HouseRent_Fixed" ColumnName="HouseRent_Fixed" />
+                <ScalarProperty Name="HouseRent_earning" ColumnName="HouseRent_earning" />
+                <ScalarProperty Name="provident_fund" ColumnName="provident_fund" />
+                <ScalarProperty Name="Baisc_fixed" ColumnName="Baisc_fixed" />
+                <ScalarProperty Name="Basic_earnings" ColumnName="Basic_earnings" />
+                <ScalarProperty Name="Leave" ColumnName="Leave" />
+                <ScalarProperty Name="TotalDaysforSalary" ColumnName="TotalDaysforSalary" />
+                <ScalarProperty Name="Daysworked" ColumnName="Daysworked" />
+                <ScalarProperty Name="TotalDays" ColumnName="TotalDays" />
+                <ScalarProperty Name="Payyear" ColumnName="Payyear" />
+                <ScalarProperty Name="Paymonth" ColumnName="Paymonth" />
+                <ScalarProperty Name="ResourceID" ColumnName="ResourceID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Errors">
+            <EntityTypeMapping TypeName="SynoProjectDBModel.Error">
+              <MappingFragment StoreEntitySet="Error">
+                <ScalarProperty Name="ErrorID" ColumnName="ErrorID" />
+                <ScalarProperty Name="UserName" ColumnName="UserName" />
+                <ScalarProperty Name="FullURL" ColumnName="FullURL" />
+                <ScalarProperty Name="ChangedOn" ColumnName="ChangedOn" />
+                <ScalarProperty Name="ChangedBy" ColumnName="ChangedBy" />
+                <ScalarProperty Name="CreatedOn" ColumnName="CreatedOn" />
+                <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+                <ScalarProperty Name="PathAndQuery" ColumnName="PathAndQuery" />
+                <ScalarProperty Name="HttpReferer" ColumnName="HttpReferer" />
+                <ScalarProperty Name="Everything" ColumnName="Everything" />
+                <ScalarProperty Name="Message" ColumnName="Message" />
+                <ScalarProperty Name="Exception" ColumnName="Exception" />
+                <ScalarProperty Name="UserAgent" ColumnName="UserAgent" />
+                <ScalarProperty Name="IpAddress" ColumnName="IpAddress" />
+                <ScalarProperty Name="ErrorDate" ColumnName="ErrorDate" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Contacts">
+            <EntityTypeMapping TypeName="SynoProjectDBModel.Contact">
+              <MappingFragment StoreEntitySet="Contact">
+                <ScalarProperty Name="ProjectTitle" ColumnName="ProjectTitle" />
+                <ScalarProperty Name="CompanyName" ColumnName="CompanyName" />
+                <ScalarProperty Name="ContactPersonNo" ColumnName="ContactPersonNo" />
+                <ScalarProperty Name="EmailID" ColumnName="EmailID" />
+                <ScalarProperty Name="SkypeID" ColumnName="SkypeID" />
+                <ScalarProperty Name="ContactADDRESS" ColumnName="ContactADDRESS" />
+                <ScalarProperty Name="ContactID" ColumnName="ContactID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Interviews">
+            <EntityTypeMapping TypeName="SynoProjectDBModel.Interview">
+              <MappingFragment StoreEntitySet="Interview">
+                <ScalarProperty Name="Feedback" ColumnName="Feedback" />
+                <ScalarProperty Name="Experience" ColumnName="Experience" />
+                <ScalarProperty Name="CurrentCTC" ColumnName="CurrentCTC" />
+                <ScalarProperty Name="Time" ColumnName="Time" />
+                <ScalarProperty Name="InterviewDate" ColumnName="InterviewDate" />
+                <ScalarProperty Name="JobPortal" ColumnName="JobPortal" />
+                <ScalarProperty Name="JobForApply" ColumnName="JobForApply" />
+                <ScalarProperty Name="Phone" ColumnName="Phone" />
+                <ScalarProperty Name="CandidateName" ColumnName="CandidateName" />
+                <ScalarProperty Name="InterviewID" ColumnName="InterviewID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

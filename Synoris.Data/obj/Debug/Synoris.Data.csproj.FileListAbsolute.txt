@@ -1,0 +1,57 @@
+D:\Syno-Agile\1. Source Code\REMS\Synoris.Data\bin\Debug\Synoris.Data.dll.config
+D:\Syno-Agile\1. Source Code\REMS\Synoris.Data\bin\Debug\Synoris.Data.dll
+D:\Syno-Agile\1. Source Code\REMS\Synoris.Data\bin\Debug\Synoris.Data.pdb
+D:\Syno-Agile\1. Source Code\REMS\Synoris.Data\bin\Debug\EntityFramework.dll
+D:\Syno-Agile\1. Source Code\REMS\Synoris.Data\bin\Debug\EntityFramework.SqlServer.dll
+D:\Syno-Agile\1. Source Code\REMS\Synoris.Data\bin\Debug\EntityFramework.xml
+D:\Syno-Agile\1. Source Code\REMS\Synoris.Data\bin\Debug\EntityFramework.SqlServer.xml
+D:\Syno-Agile\1. Source Code\REMS\Synoris.Data\obj\Debug\Synoris.Data.dll
+D:\Syno-Agile\1. Source Code\REMS\Synoris.Data\obj\Debug\Synoris.Data.pdb
+D:\Projects\REMS\Synoris.Data\bin\Debug\Synoris.Data.dll.config
+D:\Projects\REMS\Synoris.Data\bin\Debug\Synoris.Data.dll
+D:\Projects\REMS\Synoris.Data\bin\Debug\Synoris.Data.pdb
+D:\Projects\REMS\Synoris.Data\bin\Debug\EntityFramework.dll
+D:\Projects\REMS\Synoris.Data\bin\Debug\EntityFramework.SqlServer.dll
+D:\Projects\REMS\Synoris.Data\bin\Debug\EntityFramework.xml
+D:\Projects\REMS\Synoris.Data\bin\Debug\EntityFramework.SqlServer.xml
+D:\Projects\REMS\Synoris.Data\obj\Debug\Synoris.Data.csprojResolveAssemblyReference.cache
+D:\Projects\REMS\Synoris.Data\obj\Debug\Synoris.Data.dll
+D:\Projects\REMS\Synoris.Data\obj\Debug\Synoris.Data.pdb
+D:\Projects\REMS\1.SourceCode\SynorisProject\Synoris.Data\bin\Debug\Synoris.Data.dll.config
+D:\Projects\REMS\1.SourceCode\SynorisProject\Synoris.Data\bin\Debug\Synoris.Data.dll
+D:\Projects\REMS\1.SourceCode\SynorisProject\Synoris.Data\bin\Debug\Synoris.Data.pdb
+D:\Projects\REMS\1.SourceCode\SynorisProject\Synoris.Data\bin\Debug\EntityFramework.dll
+D:\Projects\REMS\1.SourceCode\SynorisProject\Synoris.Data\bin\Debug\EntityFramework.SqlServer.dll
+D:\Projects\REMS\1.SourceCode\SynorisProject\Synoris.Data\bin\Debug\EntityFramework.xml
+D:\Projects\REMS\1.SourceCode\SynorisProject\Synoris.Data\bin\Debug\EntityFramework.SqlServer.xml
+D:\Projects\REMS\1.SourceCode\SynorisProject\Synoris.Data\obj\Debug\Synoris.Data.csprojResolveAssemblyReference.cache
+D:\Projects\REMS\1.SourceCode\SynorisProject\Synoris.Data\obj\Debug\Synoris.Data.dll
+D:\Projects\REMS\1.SourceCode\SynorisProject\Synoris.Data\obj\Debug\Synoris.Data.pdb
+C:\Users\Rohan\Desktop\SynorisProject\Synoris.Data\bin\Debug\Synoris.Data.dll.config
+C:\Users\Rohan\Desktop\SynorisProject\Synoris.Data\bin\Debug\Synoris.Data.dll
+C:\Users\Rohan\Desktop\SynorisProject\Synoris.Data\bin\Debug\Synoris.Data.pdb
+C:\Users\Rohan\Desktop\SynorisProject\Synoris.Data\bin\Debug\EntityFramework.dll
+C:\Users\Rohan\Desktop\SynorisProject\Synoris.Data\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Rohan\Desktop\SynorisProject\Synoris.Data\bin\Debug\EntityFramework.xml
+C:\Users\Rohan\Desktop\SynorisProject\Synoris.Data\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Rohan\Desktop\SynorisProject\Synoris.Data\obj\Debug\Synoris.Data.dll
+C:\Users\Rohan\Desktop\SynorisProject\Synoris.Data\obj\Debug\Synoris.Data.pdb
+D:\Projects\Synoris Project Manag\1. SourceCodeGit\Synoris.Data\bin\Debug\Synoris.Data.dll.config
+D:\Projects\Synoris Project Manag\1. SourceCodeGit\Synoris.Data\bin\Debug\Synoris.Data.dll
+D:\Projects\Synoris Project Manag\1. SourceCodeGit\Synoris.Data\bin\Debug\Synoris.Data.pdb
+D:\Projects\Synoris Project Manag\1. SourceCodeGit\Synoris.Data\bin\Debug\EntityFramework.xml
+D:\Projects\Synoris Project Manag\1. SourceCodeGit\Synoris.Data\bin\Debug\EntityFramework.SqlServer.xml
+D:\Projects\Synoris Project Manag\1. SourceCodeGit\Synoris.Data\obj\Debug\Synoris.Data.dll
+D:\Projects\Synoris Project Manag\1. SourceCodeGit\Synoris.Data\obj\Debug\Synoris.Data.pdb
+E:\Syno-Agile\1. Source Code\SynorisProjectGit\Synoris.Data\bin\Debug\Synoris.Data.dll.config
+E:\Syno-Agile\1. Source Code\SynorisProjectGit\Synoris.Data\bin\Debug\Synoris.Data.dll
+E:\Syno-Agile\1. Source Code\SynorisProjectGit\Synoris.Data\bin\Debug\Synoris.Data.pdb
+E:\Syno-Agile\1. Source Code\SynorisProjectGit\Synoris.Data\bin\Debug\EntityFramework.dll
+E:\Syno-Agile\1. Source Code\SynorisProjectGit\Synoris.Data\bin\Debug\EntityFramework.SqlServer.dll
+E:\Syno-Agile\1. Source Code\SynorisProjectGit\Synoris.Data\bin\Debug\EntityFramework.xml
+E:\Syno-Agile\1. Source Code\SynorisProjectGit\Synoris.Data\bin\Debug\EntityFramework.SqlServer.xml
+E:\Syno-Agile\1. Source Code\SynorisProjectGit\Synoris.Data\obj\Debug\Synoris.Data.dll
+E:\Syno-Agile\1. Source Code\SynorisProjectGit\Synoris.Data\obj\Debug\Synoris.Data.pdb
+D:\Projects\Synoris Project Manag\1. SourceCodeGit\Synoris.Data\obj\Debug\Synoris.Data.csprojResolveAssemblyReference.cache
+D:\Projects\Synoris Project Manag\1. SourceCodeGit\Synoris.Data\bin\Debug\EntityFramework.dll
+D:\Projects\Synoris Project Manag\1. SourceCodeGit\Synoris.Data\bin\Debug\EntityFramework.SqlServer.dll

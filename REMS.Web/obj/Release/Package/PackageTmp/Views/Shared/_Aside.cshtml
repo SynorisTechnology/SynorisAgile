@@ -1,0 +1,95 @@
+﻿    <!-- Left panel : Navigation area -->
+<!-- Note: This width of the aside area can be adjusted through LESS variables -->
+<aside id="left-panel">
+
+    <!-- User info -->
+    @{ Html.RenderPartial("_CurrentUser"); }
+    <!-- end user info -->
+    <!-- NAVIGATION : This navigation is also responsive
+
+    To make this navigation dynamic please make sure to link the node
+    (the reference to the nav > ul) after page load. Or the navigation
+    will not initialize.
+    -->
+    <nav>
+        <!-- NOTE: Notice the gaps after each icon usage <i></i>..
+        Please note that these links work a bit different than
+        traditional href="" links. See documentation for details.
+        -->
+
+        <ul>
+            <li class="@Html.RouteIf("index","home","", "active")">
+                @*<a href="@Url.Action("index", "home", new { area = "" })" title="Dashboard"><i class="fa fa-lg fa-fw fa-home"></i> <span class="menu-item-parent">Dashboard</span></a>*@
+                <a href="@Url.Action("Index", "Project", new { area = "Agile" })"><i class="fa fa-lg fa-fw fa-home"></i>  <span class="menu-item-parent">Dashboard</span></a>
+            </li>
+            <li class="@Html.RouteIf("SearchProject", "Project", "Agile", "active")">
+                <a href="@Url.Action("SearchProject", "Project", new { area = "Agile" })"><i class="fa fa-lg fa-search"></i>  <span class="menu-item-parent"> Search Project</span></a>
+            </li>
+            <li class="@Html.RouteIf("AddCharges", "AChargesCtrl", "Master", "active")">
+                <a href="#"><i class="fa fa-lg fa-fw fa-bar-chart-o"></i> <span class="menu-item-parent">Resource</span></a>
+                <ul>
+                    <li class="@Html.RouteIf("AddCharges", "AChargesCtrl", "Master", "active")">
+                        <a href="@Url.Action("AddCharges", "AChargesCtrl", new { area = "Master" })"> <span class="menu-item-parent">Add New</span></a>
+                    </li>
+                    <li class="@Html.RouteIf("CarParking", "AChargesCtrl", "Master", "active")">
+                        <a href="@Url.Action("CarParking", "AChargesCtrl", new { area = "Master" })"> <span class="menu-item-parent">View Resources</span></a>
+                    </li>
+                </ul>
+            </li>
+            <li class="@Html.RouteIf("Index", "CreateProperty", "Admin", "active")">
+                <a href="#"><i class="fa fa-lg fa-fw fa-user-md"></i> <span class="menu-item-parent">Project</span></a>
+                <ul>
+                    <li class="@Html.RouteIf("Index", "CreateProperty", "Admin","active")">
+                        <a href="@Url.Action("Index", "Project", new { area = "Agile" })"> <span class="menu-item-parent">Dashboard</span></a>
+                    </li>
+                    <li class="@Html.RouteIf("AddProject", "Project", "Admin", "active")">
+                        <a href="@Url.Action("AddProject", "Project", new { area = "Agile" })"> <span class="menu-item-parent">Add Project</span></a>
+                    </li>
+                    <li class="@Html.RouteIf("AddTower", "CreateProperty", "Admin", "active")">
+                        <a href="@Url.Action("AddResource", "Resource", new { area = "Agile" })"> <span class="menu-item-parent">Add Resources</span></a>
+                    </li>
+                    <li class="@Html.RouteIf("AddFloor", "CreateProperty", "Admin", "active")">
+                        <a href="@Url.Action("Index", "Resource", new { area = "Agile" })"> <span class="menu-item-parent">List Resources</span></a>
+                    </li>
+                </ul>
+            </li>
+            <li class="@Html.RouteIf("inbox","Home","","active")">
+                <a href="@Url.Action("inbox", "home", new { area = "" })"><i class="fa fa-lg fa-fw fa-inbox"></i> <span class="menu-item-parent">Contacts</span><span class="badge pull-right inbox-badge">14</span></a>
+            </li>
+            <li class="@Html.RouteIf("flot","graphs","", "active")">
+                <a href="#"><i class="fa fa-lg fa-fw fa-bar-chart-o"></i> <span class="menu-item-parent">HR</span></a>
+                <ul>
+                </ul>
+            </li>
+            <li class="@Html.RouteIf("normal", "tables","", "active")">
+                <a href="#"><i class="fa fa-lg fa-fw fa-table"></i> <span class="menu-item-parent"> Employee</span></a>
+                <ul>
+                    <li class="@Html.RouteIf("normal", "tables", "", "active")">
+                        <a href="@Url.Action("normal", "tables", new { area = "" })">Salary</a>
+                    </li>
+                    <li class="@Html.RouteIf("datatables", "tables", "", "active")">
+                        <a href="@Url.Action("datatables", "tables", new { area = "" })">Leaves <span class=" badge inbox-badge bg-color-greenlight">v1.10</span></a>
+                    </li>
+                    <li class="@Html.RouteIf("jqgrid", "tables", "", "active")">
+                        <a href="@Url.Action("jqgrid", "tables", new { area = "" })">Salery Slip</a>
+                    </li>
+                </ul>
+            </li>
+            <li class="@Html.RouteIf("smartelements", "forms","", "active")">
+                <a href="#"><i class="fa fa-lg fa-fw fa-pencil-square-o"></i> <span class="menu-item-parent">Attendance</span></a>
+                <ul>
+                </ul>
+            </li>
+            <li class="@Html.RouteIf("general", "element","", "active")">
+                <a href="#"><i class="fa fa-lg fa-fw fa-desktop"></i> <span class="menu-item-parent">Events</span></a>
+                <ul>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+    <span class="minifyme" data-action="minifyMenu">
+        <i class="fa fa-arrow-circle-left hit"></i>
+    </span>
+
+</aside>
+<!-- END NAVIGATION -->

@@ -1,0 +1,85 @@
+D:\Projects\REMS\Synoris.Data.Access\bin\Release\AutoMapper.Net4.dll
+D:\Projects\REMS\Synoris.Data.Access\bin\Release\Synoris.Data.Access.dll.config
+D:\Projects\REMS\Synoris.Data.Access\bin\Release\Synoris.Data.Access.dll
+D:\Projects\REMS\Synoris.Data.Access\bin\Release\Synoris.Data.Access.pdb
+D:\Projects\REMS\Synoris.Data.Access\bin\Release\AutoMapper.dll
+D:\Projects\REMS\Synoris.Data.Access\bin\Release\EntityFramework.dll
+D:\Projects\REMS\Synoris.Data.Access\bin\Release\EntityFramework.SqlServer.dll
+D:\Projects\REMS\Synoris.Data.Access\bin\Release\Synoris.Data.dll
+D:\Projects\REMS\Synoris.Data.Access\bin\Release\Synoris.Data.pdb
+D:\Projects\REMS\Synoris.Data.Access\bin\Release\AutoMapper.pdb
+D:\Projects\REMS\Synoris.Data.Access\bin\Release\AutoMapper.xml
+D:\Projects\REMS\Synoris.Data.Access\bin\Release\AutoMapper.Net4.pdb
+D:\Projects\REMS\Synoris.Data.Access\bin\Release\EntityFramework.xml
+D:\Projects\REMS\Synoris.Data.Access\bin\Release\EntityFramework.SqlServer.xml
+D:\Projects\REMS\Synoris.Data.Access\obj\Release\Synoris.Data.Access.csprojResolveAssemblyReference.cache
+D:\Projects\REMS\Synoris.Data.Access\obj\Release\Synoris.Data.Access.dll
+D:\Projects\REMS\Synoris.Data.Access\obj\Release\Synoris.Data.Access.pdb
+D:\Projects\REMS\1.SourceCode\SynorisProject\Synoris.Data.Access\bin\Release\AutoMapper.Net4.dll
+D:\Projects\REMS\1.SourceCode\SynorisProject\Synoris.Data.Access\bin\Release\Synoris.Data.Access.dll.config
+D:\Projects\REMS\1.SourceCode\SynorisProject\Synoris.Data.Access\bin\Release\Synoris.Data.Access.dll
+D:\Projects\REMS\1.SourceCode\SynorisProject\Synoris.Data.Access\bin\Release\Synoris.Data.Access.pdb
+D:\Projects\REMS\1.SourceCode\SynorisProject\Synoris.Data.Access\bin\Release\AutoMapper.dll
+D:\Projects\REMS\1.SourceCode\SynorisProject\Synoris.Data.Access\bin\Release\EntityFramework.dll
+D:\Projects\REMS\1.SourceCode\SynorisProject\Synoris.Data.Access\bin\Release\EntityFramework.SqlServer.dll
+D:\Projects\REMS\1.SourceCode\SynorisProject\Synoris.Data.Access\bin\Release\Synoris.Data.dll
+D:\Projects\REMS\1.SourceCode\SynorisProject\Synoris.Data.Access\bin\Release\Synoris.Data.pdb
+D:\Projects\REMS\1.SourceCode\SynorisProject\Synoris.Data.Access\bin\Release\AutoMapper.pdb
+D:\Projects\REMS\1.SourceCode\SynorisProject\Synoris.Data.Access\bin\Release\AutoMapper.xml
+D:\Projects\REMS\1.SourceCode\SynorisProject\Synoris.Data.Access\bin\Release\AutoMapper.Net4.pdb
+D:\Projects\REMS\1.SourceCode\SynorisProject\Synoris.Data.Access\bin\Release\EntityFramework.xml
+D:\Projects\REMS\1.SourceCode\SynorisProject\Synoris.Data.Access\bin\Release\EntityFramework.SqlServer.xml
+D:\Projects\REMS\1.SourceCode\SynorisProject\Synoris.Data.Access\obj\Release\Synoris.Data.Access.csprojResolveAssemblyReference.cache
+D:\Projects\REMS\1.SourceCode\SynorisProject\Synoris.Data.Access\obj\Release\Synoris.Data.Access.dll
+D:\Projects\REMS\1.SourceCode\SynorisProject\Synoris.Data.Access\obj\Release\Synoris.Data.Access.pdb
+C:\Users\Rohan\Desktop\SynorisProject\Synoris.Data.Access\bin\Release\AutoMapper.Net4.dll
+C:\Users\Rohan\Desktop\SynorisProject\Synoris.Data.Access\bin\Release\Synoris.Data.Access.dll.config
+C:\Users\Rohan\Desktop\SynorisProject\Synoris.Data.Access\bin\Release\Synoris.Data.Access.dll
+C:\Users\Rohan\Desktop\SynorisProject\Synoris.Data.Access\bin\Release\Synoris.Data.Access.pdb
+C:\Users\Rohan\Desktop\SynorisProject\Synoris.Data.Access\bin\Release\AutoMapper.dll
+C:\Users\Rohan\Desktop\SynorisProject\Synoris.Data.Access\bin\Release\EntityFramework.dll
+C:\Users\Rohan\Desktop\SynorisProject\Synoris.Data.Access\bin\Release\EntityFramework.SqlServer.dll
+C:\Users\Rohan\Desktop\SynorisProject\Synoris.Data.Access\bin\Release\Synoris.Data.dll
+C:\Users\Rohan\Desktop\SynorisProject\Synoris.Data.Access\bin\Release\Synoris.Data.pdb
+C:\Users\Rohan\Desktop\SynorisProject\Synoris.Data.Access\bin\Release\AutoMapper.pdb
+C:\Users\Rohan\Desktop\SynorisProject\Synoris.Data.Access\bin\Release\AutoMapper.xml
+C:\Users\Rohan\Desktop\SynorisProject\Synoris.Data.Access\bin\Release\AutoMapper.Net4.pdb
+C:\Users\Rohan\Desktop\SynorisProject\Synoris.Data.Access\bin\Release\EntityFramework.xml
+C:\Users\Rohan\Desktop\SynorisProject\Synoris.Data.Access\bin\Release\EntityFramework.SqlServer.xml
+C:\Users\Rohan\Desktop\SynorisProject\Synoris.Data.Access\obj\Release\Synoris.Data.Access.csprojResolveAssemblyReference.cache
+C:\Users\Rohan\Desktop\SynorisProject\Synoris.Data.Access\obj\Release\Synoris.Data.Access.dll
+C:\Users\Rohan\Desktop\SynorisProject\Synoris.Data.Access\obj\Release\Synoris.Data.Access.pdb
+D:\Projects\Synoris Project Manag\1. SourceCodeGit\Synoris.Data.Access\bin\Release\AutoMapper.Net4.dll
+D:\Projects\Synoris Project Manag\1. SourceCodeGit\Synoris.Data.Access\bin\Release\Synoris.Data.Access.dll.config
+D:\Projects\Synoris Project Manag\1. SourceCodeGit\Synoris.Data.Access\bin\Release\Synoris.Data.Access.dll
+D:\Projects\Synoris Project Manag\1. SourceCodeGit\Synoris.Data.Access\bin\Release\Synoris.Data.Access.pdb
+D:\Projects\Synoris Project Manag\1. SourceCodeGit\Synoris.Data.Access\bin\Release\AutoMapper.dll
+D:\Projects\Synoris Project Manag\1. SourceCodeGit\Synoris.Data.Access\bin\Release\EntityFramework.dll
+D:\Projects\Synoris Project Manag\1. SourceCodeGit\Synoris.Data.Access\bin\Release\EntityFramework.SqlServer.dll
+D:\Projects\Synoris Project Manag\1. SourceCodeGit\Synoris.Data.Access\bin\Release\Synoris.Data.dll
+D:\Projects\Synoris Project Manag\1. SourceCodeGit\Synoris.Data.Access\bin\Release\Synoris.Data.pdb
+D:\Projects\Synoris Project Manag\1. SourceCodeGit\Synoris.Data.Access\bin\Release\AutoMapper.pdb
+D:\Projects\Synoris Project Manag\1. SourceCodeGit\Synoris.Data.Access\bin\Release\AutoMapper.xml
+D:\Projects\Synoris Project Manag\1. SourceCodeGit\Synoris.Data.Access\bin\Release\AutoMapper.Net4.pdb
+D:\Projects\Synoris Project Manag\1. SourceCodeGit\Synoris.Data.Access\bin\Release\EntityFramework.xml
+D:\Projects\Synoris Project Manag\1. SourceCodeGit\Synoris.Data.Access\bin\Release\EntityFramework.SqlServer.xml
+D:\Projects\Synoris Project Manag\1. SourceCodeGit\Synoris.Data.Access\obj\Release\Synoris.Data.Access.csprojResolveAssemblyReference.cache
+D:\Projects\Synoris Project Manag\1. SourceCodeGit\Synoris.Data.Access\obj\Release\Synoris.Data.Access.dll
+D:\Projects\Synoris Project Manag\1. SourceCodeGit\Synoris.Data.Access\obj\Release\Synoris.Data.Access.pdb
+E:\Syno-Agile\1. Source Code\SynorisProjectGit\Synoris.Data.Access\bin\Release\AutoMapper.Net4.dll
+E:\Syno-Agile\1. Source Code\SynorisProjectGit\Synoris.Data.Access\bin\Release\Synoris.Data.Access.dll.config
+E:\Syno-Agile\1. Source Code\SynorisProjectGit\Synoris.Data.Access\bin\Release\Synoris.Data.Access.dll
+E:\Syno-Agile\1. Source Code\SynorisProjectGit\Synoris.Data.Access\bin\Release\Synoris.Data.Access.pdb
+E:\Syno-Agile\1. Source Code\SynorisProjectGit\Synoris.Data.Access\bin\Release\AutoMapper.dll
+E:\Syno-Agile\1. Source Code\SynorisProjectGit\Synoris.Data.Access\bin\Release\EntityFramework.dll
+E:\Syno-Agile\1. Source Code\SynorisProjectGit\Synoris.Data.Access\bin\Release\EntityFramework.SqlServer.dll
+E:\Syno-Agile\1. Source Code\SynorisProjectGit\Synoris.Data.Access\bin\Release\Synoris.Data.dll
+E:\Syno-Agile\1. Source Code\SynorisProjectGit\Synoris.Data.Access\bin\Release\Synoris.Data.pdb
+E:\Syno-Agile\1. Source Code\SynorisProjectGit\Synoris.Data.Access\bin\Release\AutoMapper.pdb
+E:\Syno-Agile\1. Source Code\SynorisProjectGit\Synoris.Data.Access\bin\Release\AutoMapper.xml
+E:\Syno-Agile\1. Source Code\SynorisProjectGit\Synoris.Data.Access\bin\Release\AutoMapper.Net4.pdb
+E:\Syno-Agile\1. Source Code\SynorisProjectGit\Synoris.Data.Access\bin\Release\EntityFramework.xml
+E:\Syno-Agile\1. Source Code\SynorisProjectGit\Synoris.Data.Access\bin\Release\EntityFramework.SqlServer.xml
+E:\Syno-Agile\1. Source Code\SynorisProjectGit\Synoris.Data.Access\obj\Release\Synoris.Data.Access.csprojResolveAssemblyReference.cache
+E:\Syno-Agile\1. Source Code\SynorisProjectGit\Synoris.Data.Access\obj\Release\Synoris.Data.Access.dll
+E:\Syno-Agile\1. Source Code\SynorisProjectGit\Synoris.Data.Access\obj\Release\Synoris.Data.Access.pdb

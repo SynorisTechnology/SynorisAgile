@@ -1,0 +1,151 @@
+﻿@{
+    ViewBag.Title = "InterviewList";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+<div id="content" ng-app="AgileApp" ng-controller="InterviewController">
+    <!-- row -->
+    <div class="row">
+        <!-- col -->
+        <div class="col-xs-12 col-sm-7 col-md-7 col-lg-4">
+            <h1 class="page-title txt-color-blueDark">
+                <!-- PAGE HEADER -->
+                <i class="fa-fw fa fa-file-text-o"></i>
+                Interview List
+                <span>
+                    >
+                    Overview
+                </span>
+            </h1>
+        </div>
+        <!-- end col -->
+        <!-- right side of the page with the sparkline graphs -->
+        <!-- col -->
+        <div class="col-xs-12 col-sm-5 col-md-5 col-lg-8">
+            <!-- sparks -->
+            <!-- end sparks -->
+        </div>
+        <!-- end col -->
+    </div>
+    <div id="MessageArea" class="alert alert-block alert-{{MessageClass}}" style="display:none;">
+        <a class="close" data-dismiss="alert" href="#">×</a>
+        <h4 class="alert-heading"><i class="fa fa-check-square-o"></i> {{MessageTitle}}</h4>
+        <p>
+            {{Message}}
+        </p>
+    </div>
+    <!-- end row -->
+    <!--
+        The ID "widget-grid" will start to initialize all widgets below
+        You do not need to use widgets if you dont want to. Simply remove
+        the <section></section> and you can use wells or panels instead
+        -->
+    <!-- widget grid -->
+    <section id="widget-grid" class="">
+        <!-- row -->
+        <div class="row">
+            <!-- NEW WIDGET START -->
+            <article class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                <!--  <div class="row">
+                    <div class="col-md-8">
+                        <input type="text" class="form-control" placeholder="Search here by Technology, Project Title, Description or Client Information..." id="txtSearchBox" />
+                    </div>
+                    <div class="col-md-4">
+                        <button type="submit" data-ng-click="ShowProjectBySearch()" class="btn btn-primary">
+                            Search
+                        </button>
+                    </div>
+                    <!--  ng-model="project.Budget" -->
+                <!-- </div>-->
+                <br />
+                <!-- Widget ID (each widget will need unique ID)-->
+                <div class="jarviswidget well" id="wid-id-0">
+                    <!-- widget options:
+                        usage: <div class="jarviswidget" id="wid-id-0" data-widget-editbutton="false">
+
+                        data-widget-colorbutton="false"
+                        data-widget-editbutton="false"
+                        data-widget-togglebutton="false"
+                        data-widget-deletebutton="false"
+                        data-widget-fullscreenbutton="false"
+                        data-widget-custombutton="false"
+                        data-widget-collapsed="true"
+                        data-widget-sortable="false"
+
+                        -->
+                    <header>
+                        <span class="widget-icon"> <i class="fa fa-comments"></i> </span>
+                        <h2>Widget Title </h2>
+                    </header>
+
+                    <!-- widget div-->
+                    <div>
+                        <!-- widget edit box -->
+                        <div class="jarviswidget-editbox">
+                            <!-- This area used as dropdown edit box -->
+                            <input class="form-control" type="text">
+                        </div>
+                        <!-- end widget edit box -->
+                        <!-- widget content -->
+                        <div ng-init="GetInterview()" class="widget-body no-padding">
+                            <table id="example" class="display projects-table table table-striped table-bordered table-hover" cellspacing="0" width="100%">
+                                <thead>
+                                    <tr>
+                                        <th>Candidate Name</th>
+                                        <th>Phone</th>
+                                        <th>Job For Apply</th>
+                                        <th>Job Portal</th>
+                                        <th>Interview Date</th>
+                                        @*<th><i class="fa fa-circle txt-color-darken font-xs"></i> Contact No. </th>*@
+                                        <th>Time</th>
+                                        <th>Current CTC</th>
+                                        <th>Experience</th>
+                                        <th>Feedback</th>
+                                        <th>Action</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr data-ng-repeat="cntct in InterviewList">
+                                        <td>{{cntct.CandidateName}}</td>
+                                        <td>{{cntct.Phone}}</td>
+                                        <td>{{cntct.JobForApply}}</td>
+                                        <td>{{cntct.JobPortal}}</td>
+                                        <td>{{cntct.InterviewDate}}</td>
+                                        <td>{{cntct.Time}}</td>
+                                        <td>{{cntct.CurrentCTC}}</td>
+                                        <td>{{cntct.Experience}}</td>
+                                        <td>{{cntct.Feedback}}</td>
+                                        <td><a href="/Agile/Interview/EditInterview/{{cntct.InterviewID}}">Edit</a></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <!-- end widget content -->
+                    </div>
+                    <!-- end widget div -->
+                </div>
+                <!-- end widget -->
+            </article>
+            <!-- WIDGET END -->
+        </div>
+        <!-- end row -->
+        <!-- row -->
+        <div class="row">
+            <!-- a blank row to get started -->
+            <div class="col-sm-12">
+                <!-- your contents here -->
+            </div>
+        </div>
+        <!-- end row -->
+    </section>
+    <!-- end widget grid -->
+</div>
+@section pagespecific {
+    <script type="text/javascript">
+        var basePath = '@System.Configuration.ConfigurationManager.AppSettings["BasePath"]'
+    </script>
+    <script src="~/AgController/Interviewjs.js"></script>
+}
+
+

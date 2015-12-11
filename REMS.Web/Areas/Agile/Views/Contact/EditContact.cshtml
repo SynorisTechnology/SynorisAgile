@@ -1,0 +1,123 @@
+﻿@{
+    ViewBag.Title = "EditContact";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div id="content" data-ng-app="AgileApp" data-ng-controller="ContactController">
+    <div class="row" data-ng-init="ShowContactById()">
+        <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+            <h1 class="page-title txt-color-blueDark">
+                <!-- PAGE HEADER -->
+                <i class="fa-fw fa fa-flag"></i>
+                Edit Contact
+                <span>
+                    >
+                    Manage
+                </span>
+            </h1>
+        </div>
+        <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+
+        </div>
+    </div>
+    <div id="MessageArea" class="alert alert-block {{MessageClass}}" style="display:none;">
+        <a class="close" data-dismiss="alert" href="#">×</a>
+        <h4 class="alert-heading"><i class="fa fa-check-square-o"></i> {{MessageTitle}}</h4>
+        <p>
+            {{Message}}
+        </p>
+    </div>
+    <section id="widget-grid" class="">
+        <!-- START ROW -->
+        <div class="row">
+            <div class="col-md-12">
+                <!-- NEW COL START -->
+                <article class="col-sm-12 col-md-12 col-lg-12">
+                    <div class="jarviswidget jarviswidget-color-darken" id="wid-id-0" data-widget-editbutton="false" data-widget-deletebutton="false">
+                        <header>
+                            <span class="widget-icon"> <i class="fa fa-check"></i> </span>
+                            <h2>Add New Contact </h2>
+                        </header>
+                       
+                        <div class="tab-content">
+                            <div class="tab-pane active" id="tab1">
+                                <form id="contact-form" class="smart-form" novalidate="novalidate">
+                                    <div class="panel" >
+                                        <input type="hidden" value="@ViewBag.id" id="hdnfilename" />
+                                        <fieldset>
+                                            <div class="row">
+                                                <section class="col col-4">
+                                                    <label class="input">
+                                                        <i class="icon-prepend fa fa-check-circle"></i>
+                                                        @*<input type="text" class="form-control" ng-model="project.ProjectTitle" value="{{Contact.ProjectID}}" placeholder="Enter project title..." id="txtPName" />*@
+                                                        <select id="SelLoanType" ng-model="Contact.ProjectTitle" class="text-box" style="color:black;">
+                                                            <option data-ng-repeat="re in ProjectList" value="{{re.ProjectTitle}}">{{re.ProjectTitle}}</option>
+                                                        </select>
+                                                    </label>
+                                                </section>
+                                                <section class="col col-4">
+                                                    <label class="input">
+                                                        <i class="icon-prepend fa fa-check-circle"></i>
+                                                        Company Name:<br />
+                                                        <input type="text" class="form-control" ng-model="Contact.CompanyName"  placeholder="Enter Company Name.." id="txtCompanyName" />
+                                                    </label>
+                                                </section>
+                                                <section class="col col-4">
+                                                    <label class="input">
+                                                        <i class="icon-prepend fa fa-check-circle"></i>
+                                                        Skype-ID:<br />
+                                                        <input type="text" class="form-control" ng-model="Contact.SkypeID" placeholder="Enter Skype-ID..." id="txtSkypeID" />
+                                                    </label>
+                                                </section>
+                                            </div>
+
+                                            <div class="row">
+                                                <section class="col col-6">
+                                                    <label class="textarea">
+                                                        <i class="icon-prepend fa fa-check-circle"></i>
+                                                        Address:<br />
+                                                        <textarea class="form-control" rows="3" ng-model="Contact.ContactADDRESS"  placeholder="Enter Address.." id="txtAddress"></textarea>
+                                                    </label>
+                                                </section>
+                                                <section class="col col-6">
+                                                    <label class="textarea">
+                                                        <i class="icon-prepend fa fa-check-circle"></i>
+                                                        Email ID:<br />
+                                                        <textarea class="form-control" rows="3" ng-model="Contact.EmailID" value="{{Contact.EmailID}}" placeholder="Enter Email-ID..." id="txtEmailID"></textarea>
+                                                    </label>
+                                                </section>
+                                            </div>
+                                            <div class="row">
+                                                <section class="col col-6">
+                                                    <label class="textarea">
+                                                        <i class="icon-prepend fa fa-check-circle"></i>
+                                                        Person Name and Contact Number:<br />
+                                                        <textarea class="form-control custom-control" rows="3" ng-model="Contact.ContactPersonNo" value="{{Contact.ContactPersonNo}}" placeholder="Enter Contact Person Name And Number..." id="txtContactPersonNo"></textarea>
+                                                    </label>
+                                                </section>
+                                            </div>
+                                        </fieldset>
+                                        <footer>
+                                            <button type="submit" data-ng-click="UpdateContact()" class="btn btn-primary">
+                                                Update
+                                            </button>
+                                        </footer>
+                                    </div>
+
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+</div>
+@section pagespecific {
+<script type="text/javascript">
+    
+    var basePath = '@System.Configuration.ConfigurationManager.AppSettings["BasePath"]'
+
+</script>
+<script src="~/AgController/Contactjs.js"></script>
+}

@@ -1,0 +1,47 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Index</h2>
+<script src="~/Scripts/angular.js"></script>
+<script src="~/AgController/NgTran.js"></script>
+
+<div class="panel panel-default" ng-app="AgileApp" ng-controller="AgileController">
+    <!-- widget edit box -->
+   
+    <!-- end widget edit box -->
+    <!-- widget content -->
+    <div ng-init="GetResource()" class="widget-body no-padding">
+        <table id="example" class="display projects-table table table-striped table-bordered table-hover" cellspacing="0" width="100%">
+            <thead>
+                <tr>
+                    <th>Resource Name</th>
+                    <th><i class="fa fa-fw fa-user text-muted hidden-md hidden-sm hidden-xs"></i> Contact No.</th>
+                    <th>Email</th>                   
+                    <th><i class="fa fa-circle txt-color-darken font-xs"></i> Employee Code</th>
+                    <th><i class="fa fa-fw fa-calendar text-muted hidden-md hidden-sm hidden-xs"></i> Created date</th>
+                    <th><i class="fa fa-fw fa-calendar text-muted hidden-md hidden-sm hidden-xs"></i> Created By</th>
+                  
+                </tr>
+            </thead>
+            <tbody>
+                <tr data-ng-repeat="res in resources">
+                    <td>{{res.Name}}</td>
+                    <td>{{res.ContactNo}}</td>
+                    <td>{{res.EmailID}}</td>
+                    <td>{{res.EmpCode}}</td>
+                    <td>{{res.CrDate| date: "MM/dd/yyyy"}}</td>
+                    <td>{{res.CrBy}}</td>                    
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <!-- end widget content -->
+</div>
+
+<script src="~/Scripts/jquery-1.10.2.js"></script>
+<script type="text/javascript">
+    var basePath = '@System.Configuration.ConfigurationManager.AppSettings["BasePath"]'
+</script>

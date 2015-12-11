@@ -1,0 +1,125 @@
+﻿
+@{
+    ViewBag.Title = "AddProject";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+<script src="~/Scripts/angular.js"></script>
+<script src="~/AgController/NgTran.js"></script>
+<div class="page-header">
+    <h1>  Add Project </h1>
+</div>
+<div class="panel"  data-ng-app="AgileApp" data-ng-controller="AgileController">
+
+    <div class="row">
+        
+        <div class="col-md-4">
+            <label for="name">Project Title</label>
+            <input type="text" class="form-control" ng-model="project.ProjectTitle" placeholder="Enter project title..." id="txtPName" />
+        </div>
+        <div class="col-md-4">
+            <label for="contact">Start date</label>
+            <input type="text" class="form-control" ng-model="project.StartDate" placeholder="Enter start date..." id="datepicker" />
+        </div>
+        <div class="col-md-4">
+            <label for="contact">End date</label>
+            <input type="text" class="form-control" ng-model="project.EndDate" placeholder="Enter end date..." id="datepickerEnd" />
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12">
+            <label for="name">Project Description</label>
+            <textarea class="form-control custom-control" ng-model="project.Description" placeholder="Enter project description..." id="txtPDesc"></textarea>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-4">
+            <label for="name">Demo Url</label><br />
+            <input type="text" class="form-control" ng-model="project.DemoUrl" placeholder="Enter demo url..." id="txtDemoUrl" />
+        </div>
+        <div class="col-md-4">
+            <label for="name">Production Url</label><br />
+            <input type="text" class="form-control" ng-model="project.ProductionUrl" placeholder="Enter demo url..." id="txtProdUrl" />
+        </div>
+        <div class="col-md-4">
+            <label for="contact">Deadline</label>
+            <input type="text" class="form-control" ng-model="project.DeadLine" placeholder="Enter deadline date..." id="datepickerDeadLine" />
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-4">
+            <label for="name">Bitbucket Url</label>
+            <input type="text" class="form-control" ng-model="project.BitBucketUrl" placeholder="Enter bitbucket url..." id="txtBitUrl" />
+        </div>
+        <div class="col-md-4">
+            <label for="name">SVN</label>
+            <input type="text" class="form-control" ng-model="project.SVN" placeholder="Enter svn link..." id="txtSvn" />
+        </div>
+        <div class="col-md-4">
+            <label for="contact">Client Information</label>
+            <input type="text" class="form-control" ng-model="project.ClientInfo" placeholder="Enter client information..." id="txtClntInfo" />
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-4">
+            <label for="name">Password</label>
+            <input type="password" class="form-control" ng-model="project.ProjectPassword" placeholder="Enter project password..." id="txtPwd" />
+        </div>
+        <div class="col-md-4">
+            <label for="name">Targeted </label>
+            <input type="text" class="form-control" ng-model="project.Targated" placeholder="Enter targeted..." id="txtTargeted" />
+        </div>
+        <div class="col-md-4">
+            <label for="contact">Budget</label>
+            <input type="text" class="form-control" ng-model="project.Budget" placeholder="Enter project budget..." id="txtBudget" />
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-4">
+            <label for="name">Status</label><br />
+            <input type="radio" id="statusYes" width="200" ng-model="project.Status" checked="checked" name="grpStatus" value="True" />Yes
+            <input type="radio" id="statusNo" width="200" ng-model="project.Status" name="grpStatus" value="False" />No
+        </div>
+        <div class="col-md-4">
+            <label for="name">Tracker</label><br />
+            <input type="radio" id="TrackerYes" width="200" ng-model="project.Tracker" checked name="grpTracker" value="True" />Yes
+            <input type="radio" id="TrackerNo" width="200" ng-model="project.Tracker" name="grpTracker" value="False" />No
+        </div>
+        <div class="col-md-4">
+           
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12">
+            &nbsp;
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12" style="text-align:center;">
+            <input type="button" class="btn btn-default" data-ng-click="AddProject()" value="Submit" id="btnSubmit" />
+        </div>
+    </div>
+</div>
+
+<link rel="stylesheet" href="http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css">
+<script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+<script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
+
+<script type="text/javascript">
+
+    $('#datepicker').datepicker().on('changeDate', function () {
+        $(this).blur(); //Initialise any date pickers
+    });
+    $('#datepickerEnd').datepicker().on('changeDate', function () {
+        $(this).blur(); //Initialise any date pickers
+    });
+    $('#datepickerDeadLine').datepicker().on('changeDate', function () {
+        $(this).blur(); //Initialise any date pickers
+    });
+
+    
+
+        var basePath = '@System.Configuration.ConfigurationManager.AppSettings["BasePath"]'   
+    </script>
+

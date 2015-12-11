@@ -1,0 +1,168 @@
+﻿@{
+    ViewBag.Title = "InterviewSection";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<!-- MAIN CONTENT -->
+<div id="content" data-ng-app="AgileApp" data-ng-controller="InterviewController">
+    <div class="row">
+        <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+            <h1 class="page-title txt-color-blueDark">
+                <!-- PAGE HEADER -->
+                <i class="fa-fw fa fa-flag"></i>
+                Add Interview Info
+                <span>
+                    >
+                    Manage
+                </span>
+            </h1>
+        </div>
+        <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+
+        </div>
+    </div>
+    <div id="MessageArea" class="alert alert-block {{MessageClass}}" style="display:none;">
+        <a class="close" data-dismiss="alert" href="#">×</a>
+        <h4 class="alert-heading"><i class="fa fa-check-square-o"></i> {{MessageTitle}}</h4>
+        <p>
+            {{Message}}
+        </p>
+    </div>
+
+    <section id="widget-grid" class="">
+        <!-- START ROW -->
+        <div class="row">
+            <div class="col-md-12">
+                <!-- NEW COL START -->
+                <article class="col-sm-12 col-md-12 col-lg-12">
+                    <div class="jarviswidget jarviswidget-color-darken" id="wid-id-0" data-widget-editbutton="false" data-widget-deletebutton="false">
+                        <header>
+                            <span class="widget-icon"> <i class="fa fa-check"></i> </span>
+                            <h2>Add New Contact </h2>
+                        </header>
+                        <div class="tab-content">
+                            <div class="tab-pane active" id="tab1">
+                                <form id="Interview-form" class="smart-form" novalidate="novalidate">
+                                    <div class="panel">
+                                        <fieldset>
+                                            <div class="row">
+                                                <section class="col col-4">
+                                                    <label class="input">
+                                                        <i class="icon-prepend fa fa-check-circle"></i>
+                                                        Candidate Name:<br />
+                                                        <input type="text" class="form-control" ng-model="Interview.CandidateName" placeholder="Enter Candidate Name..." id="txtCandidateName" />
+                                                    </label>
+                                                </section>
+                                                <section class="col col-4">
+                                                    <label class="input">
+                                                        <i class="icon-prepend fa fa-check-circle"></i>
+                                                        Phone No:<br />
+                                                        <input type="text" class="form-control" ng-model="Interview.Phone" placeholder="Enter Phone No.." id="txtPhone" />
+                                                    </label>
+                                                </section>
+                                                <section class="col col-4">
+                                                    <label class="input">
+                                                        <i class="icon-prepend fa fa-check-circle"></i>
+                                                        Apply Job:<br />
+                                                        <input type="text" class="form-control" ng-model="Interview.JobForApply" placeholder="Enter Job For Apply..." id="txtJobForApply" />
+                                                    </label>
+                                                </section>
+                                            </div>
+                                            <div class="row">
+                                                <section class="col col-4">
+                                                    <label class="input">
+                                                        <i class="icon-prepend fa fa-check-circle"></i>
+                                                        Job Portal:<br />
+                                                        <input type="text" class="form-control" ng-model="Interview.JobPortal" placeholder="Enter Job Portal..." id="txtJobPortal" />
+                                                    </label>
+                                                </section>
+                                                <section class="col col-4">
+                                                    <label class="input">
+                                                        <i class="icon-prepend fa fa-check-circle"></i>
+                                                        Interview Date:<br />
+                                                        <input type="text" class="form-control" ng-model="Interview.InterviewDate" placeholder="Enter Interview Date.." id="datepicker" />
+                                                    </label>
+                                                </section>
+                                                <section class="col col-4">
+                                                    <label class="input">
+                                                        <i class="icon-prepend fa fa-check-circle"></i>
+                                                        Time:<br />
+                                                        <input type="text" class="form-control" ng-model="Interview.Time" placeholder="Enter Interview Time..." id="txtTime" />
+                                                    </label>
+                                                </section>
+                                            </div>
+                                            <div class="row">
+                                                <section class="col col-4">
+                                                    <label class="input">
+                                                        <i class="icon-prepend fa fa-check-circle"></i>
+                                                        Current CTC:<br />
+                                                        <input type="text" class="form-control" ng-model="Interview.CurrentCTC" placeholder="Enter Current CTC..." id="txtCurrentCTC" />
+                                                    </label>
+                                                </section>
+                                                <section class="col col-4">
+                                                    <label class="input">
+                                                        <i class="icon-prepend fa fa-check-circle"></i>
+                                                        Experience:<br />
+                                                        <input type="text" class="form-control" ng-model="Interview.Experience" placeholder="Enter Work Experience.." id="txtExperience" />
+                                                    </label>
+                                                </section>
+                                                <section class="col col-4">
+                                                    <label class="input">
+                                                        <i class="icon-prepend fa fa-check-circle"></i>
+                                                        Time:<br />
+                                                        <input type="text" class="form-control" ng-model="Interview.Feedback" placeholder="Enter Feedback..." id="txtFeedback" />
+                                                    </label>
+                                                </section>
+                                            </div>
+                                        </fieldset>
+                                        <footer>
+                                            <button type="submit" data-ng-click="AddInterviewInfo()" class="btn btn-primary">
+                                                Save
+                                            </button>
+                                        </footer>
+                                    </div>
+
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+</div>
+@section pagespecific {
+    <script src="~/AgController/Interviewjs.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            // START AND FINISH DATE
+            $('#datepicker').datepicker({
+                dateFormat: 'dd/mm/yy',
+                prevText: '<i class="fa fa-chevron-left"></i>',
+                nextText: '<i class="fa fa-chevron-right"></i>',
+                onSelect: function (selectedDate) {
+                    $('#datepickerEnd').datepicker('option', 'minDate', selectedDate);
+                }
+            });
+
+            $('#datepickerEnd').datepicker({
+                dateFormat: 'dd/mm/yy',
+                prevText: '<i class="fa fa-chevron-left"></i>',
+                nextText: '<i class="fa fa-chevron-right"></i>',
+                onSelect: function (selectedDate) {
+                    $('#datepicker').datepicker('option', 'maxDate', selectedDate);
+                }
+            });
+            $('#datepickerDeadLine').datepicker({
+                dateFormat: 'dd/mm/yy',
+                prevText: '<i class="fa fa-chevron-left"></i>',
+                nextText: '<i class="fa fa-chevron-right"></i>',
+                onSelect: function (selectedDate) {
+                    $('#datepickerEnd').datepicker('option', 'maxDate', selectedDate);
+                }
+            });
+        })
+        var basePath = '@System.Configuration.ConfigurationManager.AppSettings["BasePath"]'
+    </script>
+}
+

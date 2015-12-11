@@ -1,0 +1,189 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="SynoProjectDBModelStoreContainer" CdmEntityContainer="SynoProjectDBEntities">
+    <EntitySetMapping Name="ProjectResources">
+      <EntityTypeMapping TypeName="SynoProjectDBModel.ProjectResource">
+        <MappingFragment StoreEntitySet="ProjectResource">
+          <ScalarProperty Name="AssignBy" ColumnName="AssignBy" />
+          <ScalarProperty Name="AssignDate" ColumnName="AssignDate" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="ResourceID" ColumnName="ResourceID" />
+          <ScalarProperty Name="ProjectID" ColumnName="ProjectID" />
+          <ScalarProperty Name="ProjectResourceID" ColumnName="ProjectResourceID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Resources">
+      <EntityTypeMapping TypeName="SynoProjectDBModel.Resource">
+        <MappingFragment StoreEntitySet="Resource">
+          <ScalarProperty Name="DepartmentId" ColumnName="DepartmentId" />
+          <ScalarProperty Name="CrBy" ColumnName="CrBy" />
+          <ScalarProperty Name="CrDate" ColumnName="CrDate" />
+          <ScalarProperty Name="EmpCode" ColumnName="EmpCode" />
+          <ScalarProperty Name="EmailID" ColumnName="EmailID" />
+          <ScalarProperty Name="ContactNo" ColumnName="ContactNo" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="ResourceID" ColumnName="ResourceID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Projects">
+      <EntityTypeMapping TypeName="SynoProjectDBModel.Project">
+        <MappingFragment StoreEntitySet="Project">
+          <ScalarProperty Name="ProjectTech" ColumnName="ProjectTech" />
+          <ScalarProperty Name="ProductionUrl" ColumnName="ProductionUrl" />
+          <ScalarProperty Name="DemoUrl" ColumnName="DemoUrl" />
+          <ScalarProperty Name="Budget" ColumnName="Budget" />
+          <ScalarProperty Name="Targated" ColumnName="Targated" />
+          <ScalarProperty Name="ProjectPassword" ColumnName="ProjectPassword" />
+          <ScalarProperty Name="ClientInfo" ColumnName="ClientInfo" />
+          <ScalarProperty Name="SVN" ColumnName="SVN" />
+          <ScalarProperty Name="BitBucketUrl" ColumnName="BitBucketUrl" />
+          <ScalarProperty Name="DeadLine" ColumnName="DeadLine" />
+          <ScalarProperty Name="Tracker" ColumnName="Tracker" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="EndDate" ColumnName="EndDate" />
+          <ScalarProperty Name="StartDate" ColumnName="StartDate" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="ProjectTitle" ColumnName="ProjectTitle" />
+          <ScalarProperty Name="ProjectID" ColumnName="ProjectID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="C__MigrationHistory">
+      <EntityTypeMapping TypeName="SynoProjectDBModel.C__MigrationHistory">
+        <MappingFragment StoreEntitySet="__MigrationHistory">
+          <ScalarProperty Name="ProductVersion" ColumnName="ProductVersion" />
+          <ScalarProperty Name="Model" ColumnName="Model" />
+          <ScalarProperty Name="ContextKey" ColumnName="ContextKey" />
+          <ScalarProperty Name="MigrationId" ColumnName="MigrationId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="AspNetRoles">
+      <EntityTypeMapping TypeName="SynoProjectDBModel.AspNetRole">
+        <MappingFragment StoreEntitySet="AspNetRoles">
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="AspNetUserClaims">
+      <EntityTypeMapping TypeName="SynoProjectDBModel.AspNetUserClaim">
+        <MappingFragment StoreEntitySet="AspNetUserClaims">
+          <ScalarProperty Name="ClaimValue" ColumnName="ClaimValue" />
+          <ScalarProperty Name="ClaimType" ColumnName="ClaimType" />
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="AspNetUserLogins">
+      <EntityTypeMapping TypeName="SynoProjectDBModel.AspNetUserLogin">
+        <MappingFragment StoreEntitySet="AspNetUserLogins">
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+          <ScalarProperty Name="ProviderKey" ColumnName="ProviderKey" />
+          <ScalarProperty Name="LoginProvider" ColumnName="LoginProvider" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="AspNetUserRoles">
+      <EntityTypeMapping TypeName="SynoProjectDBModel.AspNetUserRole">
+        <MappingFragment StoreEntitySet="AspNetUserRoles">
+          <ScalarProperty Name="RoleId" ColumnName="RoleId" />
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="AspNetUsers">
+      <EntityTypeMapping TypeName="SynoProjectDBModel.AspNetUser">
+        <MappingFragment StoreEntitySet="AspNetUsers">
+          <ScalarProperty Name="UserName" ColumnName="UserName" />
+          <ScalarProperty Name="AccessFailedCount" ColumnName="AccessFailedCount" />
+          <ScalarProperty Name="LockoutEnabled" ColumnName="LockoutEnabled" />
+          <ScalarProperty Name="LockoutEndDateUtc" ColumnName="LockoutEndDateUtc" />
+          <ScalarProperty Name="TwoFactorEnabled" ColumnName="TwoFactorEnabled" />
+          <ScalarProperty Name="PhoneNumberConfirmed" ColumnName="PhoneNumberConfirmed" />
+          <ScalarProperty Name="PhoneNumber" ColumnName="PhoneNumber" />
+          <ScalarProperty Name="SecurityStamp" ColumnName="SecurityStamp" />
+          <ScalarProperty Name="PasswordHash" ColumnName="PasswordHash" />
+          <ScalarProperty Name="EmailConfirmed" ColumnName="EmailConfirmed" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Departments">
+      <EntityTypeMapping TypeName="SynoProjectDBModel.Department">
+        <MappingFragment StoreEntitySet="Department">
+          <ScalarProperty Name="DepartmentId" ColumnName="DepartmentId" />
+          <ScalarProperty Name="DepartmentName" ColumnName="DepartmentName" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Payslips">
+      <EntityTypeMapping TypeName="SynoProjectDBModel.Payslip">
+        <MappingFragment StoreEntitySet="Payslip">
+          <ScalarProperty Name="DepartmentId" ColumnName="DepartmentId" />
+          <ScalarProperty Name="PayslipID" ColumnName="PayslipID" />
+          <ScalarProperty Name="Date1" ColumnName="Date1" />
+          <ScalarProperty Name="Netpay" ColumnName="Netpay" />
+          <ScalarProperty Name="Totaldeduction" ColumnName="Totaldeduction" />
+          <ScalarProperty Name="Grosspay_fixed" ColumnName="Grosspay_fixed" />
+          <ScalarProperty Name="Grosspay_earning" ColumnName="Grosspay_earning" />
+          <ScalarProperty Name="Specialperformance_Fixed" ColumnName="Specialperformance_Fixed" />
+          <ScalarProperty Name="Specialperformance_earning" ColumnName="Specialperformance_earning" />
+          <ScalarProperty Name="OA3_fixed" ColumnName="OA3_fixed" />
+          <ScalarProperty Name="OA3_earning" ColumnName="OA3_earning" />
+          <ScalarProperty Name="Advanceloan" ColumnName="Advanceloan" />
+          <ScalarProperty Name="OA2_fixed" ColumnName="OA2_fixed" />
+          <ScalarProperty Name="OA2_earning" ColumnName="OA2_earning" />
+          <ScalarProperty Name="Lunch" ColumnName="Lunch" />
+          <ScalarProperty Name="OA1_fixed" ColumnName="OA1_fixed" />
+          <ScalarProperty Name="OA1_earning" ColumnName="OA1_earning" />
+          <ScalarProperty Name="Tds" ColumnName="Tds" />
+          <ScalarProperty Name="Incentive_Fixed" ColumnName="Incentive_Fixed" />
+          <ScalarProperty Name="Incentive_earning" ColumnName="Incentive_earning" />
+          <ScalarProperty Name="ProfessionalTax" ColumnName="ProfessionalTax" />
+          <ScalarProperty Name="Con_Allowance_fixed" ColumnName="Con_Allowance_fixed" />
+          <ScalarProperty Name="Con_Allowance_earning" ColumnName="Con_Allowance_earning" />
+          <ScalarProperty Name="Esic" ColumnName="Esic" />
+          <ScalarProperty Name="HouseRent_Fixed" ColumnName="HouseRent_Fixed" />
+          <ScalarProperty Name="HouseRent_earning" ColumnName="HouseRent_earning" />
+          <ScalarProperty Name="provident_fund" ColumnName="provident_fund" />
+          <ScalarProperty Name="Baisc_fixed" ColumnName="Baisc_fixed" />
+          <ScalarProperty Name="Basic_earnings" ColumnName="Basic_earnings" />
+          <ScalarProperty Name="Leave" ColumnName="Leave" />
+          <ScalarProperty Name="TotalDaysforSalary" ColumnName="TotalDaysforSalary" />
+          <ScalarProperty Name="Daysworked" ColumnName="Daysworked" />
+          <ScalarProperty Name="TotalDays" ColumnName="TotalDays" />
+          <ScalarProperty Name="Payyear" ColumnName="Payyear" />
+          <ScalarProperty Name="Paymonth" ColumnName="Paymonth" />
+          <ScalarProperty Name="ResourceID" ColumnName="ResourceID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Errors">
+      <EntityTypeMapping TypeName="SynoProjectDBModel.Error">
+        <MappingFragment StoreEntitySet="Error">
+          <ScalarProperty Name="ErrorID" ColumnName="ErrorID" />
+          <ScalarProperty Name="UserName" ColumnName="UserName" />
+          <ScalarProperty Name="FullURL" ColumnName="FullURL" />
+          <ScalarProperty Name="ChangedOn" ColumnName="ChangedOn" />
+          <ScalarProperty Name="ChangedBy" ColumnName="ChangedBy" />
+          <ScalarProperty Name="CreatedOn" ColumnName="CreatedOn" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="PathAndQuery" ColumnName="PathAndQuery" />
+          <ScalarProperty Name="HttpReferer" ColumnName="HttpReferer" />
+          <ScalarProperty Name="Everything" ColumnName="Everything" />
+          <ScalarProperty Name="Message" ColumnName="Message" />
+          <ScalarProperty Name="Exception" ColumnName="Exception" />
+          <ScalarProperty Name="UserAgent" ColumnName="UserAgent" />
+          <ScalarProperty Name="IpAddress" ColumnName="IpAddress" />
+          <ScalarProperty Name="ErrorDate" ColumnName="ErrorDate" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

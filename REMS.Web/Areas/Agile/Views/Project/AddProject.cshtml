@@ -1,0 +1,233 @@
+﻿@{
+    ViewBag.Title = "AddProject";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<!-- MAIN CONTENT -->
+<div id="content" data-ng-app="AgileApp" data-ng-controller="AgileController">
+    <div class="row">
+        <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+            <h1 class="page-title txt-color-blueDark">
+                <!-- PAGE HEADER -->
+                <i class="fa-fw fa fa-flag"></i>
+                Add Project
+                <span>
+                    >
+                    Manage
+                </span>
+            </h1>
+        </div>
+        <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+
+        </div>
+    </div>
+    <div id="MessageArea" class="alert alert-block {{MessageClass}}" style="display:none;">
+        <a class="close" data-dismiss="alert" href="#">×</a>
+        <h4 class="alert-heading"><i class="fa fa-check-square-o"></i> {{MessageTitle}}</h4>
+        <p>
+            {{Message}}
+        </p>
+    </div>
+    <section id="widget-grid" class="">
+        <!-- START ROW -->
+        <div class="row">
+            <div class="col-md-12">
+                <!-- NEW COL START -->
+                <article class="col-sm-12 col-md-12 col-lg-12">
+                    <div class="jarviswidget jarviswidget-color-darken" id="wid-id-0" data-widget-editbutton="false" data-widget-deletebutton="false">
+                        <header>
+                            <span class="widget-icon"> <i class="fa fa-check"></i> </span>
+                            <h2>Add New Project </h2>
+                        </header>
+                        <div class="tab-content">
+                            <div class="tab-pane active" id="tab1">
+                                <form id="project-form" class="smart-form" novalidate="novalidate">
+
+                                    <div class="panel">
+                                        <fieldset>
+                                            <div class="row">
+                                                <section class="col col-4">
+                                                    <label class="input">
+                                                        <i class="icon-prepend fa fa-check-circle"></i>
+                                                        <input type="text" class="form-control" ng-model="project.ProjectTitle" placeholder="Enter project title..." id="txtPName" />
+                                                    </label>
+                                                </section>
+                                                <section class="col col-4">
+                                                    <label class="input">
+                                                        <i class="icon-prepend fa fa-check-circle"></i>
+                                                        <input type="text" class="form-control" ng-model="project.StartDateSt" placeholder="Enter start date..." id="datepicker" />
+                                                    </label>
+                                                </section>
+                                                <section class="col col-4">
+                                                    <label class="input">
+                                                        <i class="icon-prepend fa fa-check-circle"></i>
+                                                        <input type="text" class="form-control" ng-model="project.EndDateSt" placeholder="Enter end date..." id="datepickerEnd" />
+                                                    </label>
+                                                </section>
+                                            </div>
+                                            <div class="row">
+                                                <section class="col col-4">
+                                                    <label class="input">
+                                                        <i class="icon-prepend fa fa-check-circle"></i>
+                                                        <input type="text" class="form-control" ng-model="project.DemoUrl" placeholder="Enter demo url..." id="txtDemoUrl" />
+                                                    </label>
+                                                </section>
+                                                <section class="col col-4">
+                                                    <label class="input">
+                                                        <i class="icon-prepend fa fa-check-circle"></i>
+                                                        <input type="text" class="form-control" ng-model="project.ProductionUrl" placeholder="Enter demo url..." id="txtProdUrl" />
+                                                    </label>
+                                                </section>
+                                                <section class="col col-4">
+                                                    <label class="input">
+                                                        <i class="icon-prepend fa fa-check-circle"></i>
+                                                        <input type="text" class="form-control" ng-model="project.DeadLineSt" placeholder="Enter deadline date..." id="datepickerDeadLine" />
+                                                    </label>
+                                                </section>
+                                            </div>
+                                            <div class="row">
+                                                <section class="col col-4">
+                                                    <label class="input">
+                                                        <i class="icon-prepend fa fa-check-circle"></i>
+                                                        <input type="text" class="form-control" ng-model="project.BitBucketUrl" placeholder="Enter git url..." id="txtBitUrl" />
+                                                    </label>
+                                                </section>
+                                                <section class="col col-4">
+                                                    <label class="input">
+                                                        <i class="icon-prepend fa fa-check-circle"></i>
+                                                        <input type="text" class="form-control" ng-model="project.SVN" placeholder="Enter svn link..." id="txtSvn" />
+                                                    </label>
+                                                </section>
+
+                                                <section class="col col-4">
+                                                    <label class="input">
+                                                        <i class="icon-prepend fa fa-check-circle"></i>
+                                                        <input type="text" class="form-control" ng-model="project.ClientInfo" placeholder="Enter client information..." id="txtClntInfo" />
+                                                    </label>
+                                                </section>
+                                            </div>
+                                            <div class="row">
+
+                                                <section class="col col-4">
+                                                    <label class="input">
+                                                        <i class="icon-prepend fa fa-check-circle"></i>
+                                                        <input type="number" max="100" min="0" class="form-control" ng-model="project.Targated" placeholder="Enter targeted..." id="txtTargeted" />
+                                                    </label>
+                                                </section>
+                                                <section class="col col-4">
+                                                    <label class="input">
+                                                        <i class="icon-prepend fa fa-check-circle"></i>
+                                                        <input type="text" class="form-control" ng-model="project.Budget" placeholder="Enter project budget..." id="txtBudget" />
+                                                    </label>
+                                                </section>
+                                            </div>
+                                            <div class="row">
+                                                <section class="col col-6">
+                                                    <label class="textarea">
+                                                        <i class="icon-prepend fa fa-check-circle"></i>
+                                                        <textarea class="form-control" rows="3" ng-model="project.ProjectTech" placeholder="Enter Information Tag" id="txtTechnicalDetail"></textarea>
+                                                    </label>
+                                                </section>
+                                                <section class="col col-6">
+                                                    <label class="textarea">
+                                                        <i class="icon-prepend fa fa-check-circle"></i>
+                                                        <textarea class="form-control" rows="3" ng-model="project.ProjectPassword" placeholder="Enter project password..." id="txtPwd"></textarea>
+                                                    </label>
+                                                </section>
+                                            </div>
+                                            <div class="row">
+                                                <section class="col col-6">
+                                                    <label class="textarea">
+                                                        <i class="icon-prepend fa fa-check-circle"></i>
+                                                        <textarea class="form-control custom-control" rows="3" ng-model="project.Description" placeholder="Enter project description..." id="txtPDesc"></textarea>
+                                                    </label>
+                                                </section>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col col-4">
+                                                    <label for="name">Status</label><br />
+                                                    <input type="radio" id="statusYes" width="200" ng-model="project.Status" checked="checked" name="grpStatus" value="True" /> Yes
+                                                    <input type="radio" id="statusNo" width="200" ng-model="project.Status" name="grpStatus" value="False" /> No
+                                                </div>
+                                                <div class="col col-4">
+                                                    <label for="name">Tracker</label><br />
+                                                    <input type="radio" id="TrackerYes" width="200" ng-model="project.Tracker" checked name="grpTracker" value="True" /> Yes
+                                                    <input type="radio" id="TrackerNo" width="200" ng-model="project.Tracker" name="grpTracker" value="False" /> No
+                                                </div>
+                                                <div class="col-md-4">
+
+                                                </div>
+                                            </div>
+                                            @*<div class="row">
+                                                    <div class="col-md-12">
+                                                        &nbsp;
+                                                    </div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="col-md-12" style="text-align:center;">
+                                                        <input type="button" class="btn btn-default" data-ng-click="AddProject()" value="Submit" id="btnSubmit" />
+                                                    </div>
+                                                </div>*@
+                                        </fieldset>
+                                        <footer>
+                                            <button type="submit" data-ng-click="AddProject()" class="btn btn-primary">
+                                                Save
+                                            </button>
+                                        </footer>
+                                    </div>
+
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+</div>
+@section pagespecific {
+    <script src="~/AgController/Projectjs.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            // START AND FINISH DATE
+            $('#datepicker').datepicker({
+                dateFormat: 'dd/mm/yy',
+                prevText: '<i class="fa fa-chevron-left"></i>',
+                nextText: '<i class="fa fa-chevron-right"></i>',
+                onSelect: function (selectedDate) {
+                    $('#datepickerEnd').datepicker('option', 'minDate', selectedDate);
+                }
+            });
+
+            $('#datepickerEnd').datepicker({
+                dateFormat: 'dd/mm/yy',
+                prevText: '<i class="fa fa-chevron-left"></i>',
+                nextText: '<i class="fa fa-chevron-right"></i>',
+                onSelect: function (selectedDate) {
+                    $('#datepicker').datepicker('option', 'maxDate', selectedDate);
+                }
+            });
+            $('#datepickerDeadLine').datepicker({
+                dateFormat: 'dd/mm/yy',
+                prevText: '<i class="fa fa-chevron-left"></i>',
+                nextText: '<i class="fa fa-chevron-right"></i>',
+                onSelect: function (selectedDate) {
+                    $('#datepickerEnd').datepicker('option', 'maxDate', selectedDate);
+                }
+            });
+        })
+
+        //$('#datepicker').datepicker().on('changeDate', function () {
+        //    $(this).blur(); //Initialise any date pickers
+        //});
+        //$('#datepickerEnd').datepicker().on('changeDate', function () {
+        //    $(this).blur(); //Initialise any date pickers
+        //});
+
+        $(document).ready(function () {
+            $("#statusYes").attr("checked", "checked");
+            $("#TrackerYes").attr("checked", "checked");
+        });
+        var basePath = '@System.Configuration.ConfigurationManager.AppSettings["BasePath"]'
+    </script>
+}

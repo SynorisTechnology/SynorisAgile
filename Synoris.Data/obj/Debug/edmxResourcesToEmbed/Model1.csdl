@@ -1,0 +1,286 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="SynoProjectDBModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityContainer Name="SynoProjectDBEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="ProjectResources" EntityType="SynoProjectDBModel.ProjectResource" />
+    <EntitySet Name="Resources" EntityType="SynoProjectDBModel.Resource" />
+    <AssociationSet Name="FK_ProjectResource_Resource" Association="SynoProjectDBModel.FK_ProjectResource_Resource">
+      <End Role="Resource" EntitySet="Resources" />
+      <End Role="ProjectResource" EntitySet="ProjectResources" />
+    </AssociationSet>
+    <EntitySet Name="Projects" EntityType="SynoProjectDBModel.Project" />
+    <EntitySet Name="C__MigrationHistory" EntityType="SynoProjectDBModel.C__MigrationHistory" />
+    <EntitySet Name="AspNetRoles" EntityType="SynoProjectDBModel.AspNetRole" />
+    <EntitySet Name="AspNetUserClaims" EntityType="SynoProjectDBModel.AspNetUserClaim" />
+    <EntitySet Name="AspNetUserLogins" EntityType="SynoProjectDBModel.AspNetUserLogin" />
+    <EntitySet Name="AspNetUserRoles" EntityType="SynoProjectDBModel.AspNetUserRole" />
+    <EntitySet Name="AspNetUsers" EntityType="SynoProjectDBModel.AspNetUser" />
+    <EntitySet Name="Departments" EntityType="SynoProjectDBModel.Department" />
+    <EntitySet Name="Payslips" EntityType="SynoProjectDBModel.Payslip" />
+    <AssociationSet Name="DepartmentId" Association="SynoProjectDBModel.DepartmentId">
+      <End Role="Department" EntitySet="Departments" />
+      <End Role="Payslip" EntitySet="Payslips" />
+    </AssociationSet>
+    <AssociationSet Name="DepartmentId1" Association="SynoProjectDBModel.DepartmentId1">
+      <End Role="Department" EntitySet="Departments" />
+      <End Role="Resource" EntitySet="Resources" />
+    </AssociationSet>
+    <EntitySet Name="Errors" EntityType="SynoProjectDBModel.Error" />
+    <EntitySet Name="Contacts" EntityType="SynoProjectDBModel.Contact" />
+    <EntitySet Name="Interviews" EntityType="SynoProjectDBModel.Interview" />
+  </EntityContainer>
+  <EntityType Name="ProjectResource">
+    <Key>
+      <PropertyRef Name="ProjectResourceID" />
+    </Key>
+    <Property Name="ProjectResourceID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ProjectID" Type="Int32" />
+    <Property Name="ResourceID" Type="Int32" />
+    <Property Name="Status" Type="Boolean" />
+    <Property Name="AssignDate" Type="DateTime" Precision="0" />
+    <Property Name="AssignBy" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="Resource" Relationship="SynoProjectDBModel.FK_ProjectResource_Resource" FromRole="ProjectResource" ToRole="Resource" />
+  </EntityType>
+  <EntityType Name="Resource">
+    <Key>
+      <PropertyRef Name="ResourceID" />
+    </Key>
+    <Property Name="ResourceID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" MaxLength="256" FixedLength="false" Unicode="true" />
+    <Property Name="ContactNo" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="EmailID" Type="String" MaxLength="256" FixedLength="false" Unicode="true" />
+    <Property Name="EmpCode" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="CrDate" Type="DateTime" Precision="0" />
+    <Property Name="CrBy" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="ProjectResources" Relationship="SynoProjectDBModel.FK_ProjectResource_Resource" FromRole="Resource" ToRole="ProjectResource" />
+    <Property Name="DepartmentId" Type="Int32" />
+    <NavigationProperty Name="Department" Relationship="SynoProjectDBModel.DepartmentId1" FromRole="Resource" ToRole="Department" />
+  </EntityType>
+  <Association Name="FK_ProjectResource_Resource">
+    <End Type="SynoProjectDBModel.Resource" Role="Resource" Multiplicity="0..1" />
+    <End Type="SynoProjectDBModel.ProjectResource" Role="ProjectResource" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Resource">
+        <PropertyRef Name="ResourceID" />
+      </Principal>
+      <Dependent Role="ProjectResource">
+        <PropertyRef Name="ResourceID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityType Name="Project">
+    <Key>
+      <PropertyRef Name="ProjectID" />
+    </Key>
+    <Property Name="ProjectID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ProjectTitle" Type="String" MaxLength="256" FixedLength="false" Unicode="true" />
+    <Property Name="Description" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="StartDate" Type="DateTime" Precision="0" />
+    <Property Name="EndDate" Type="DateTime" Precision="0" />
+    <Property Name="Status" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Tracker" Type="Boolean" />
+    <Property Name="DeadLine" Type="DateTime" Precision="0" />
+    <Property Name="BitBucketUrl" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="SVN" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="ClientInfo" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="ProjectPassword" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="Targated" Type="Int32" />
+    <Property Name="Budget" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="DemoUrl" Type="String" MaxLength="256" FixedLength="false" Unicode="true" />
+    <Property Name="ProductionUrl" Type="String" MaxLength="256" FixedLength="false" Unicode="true" />
+    <Property Name="ProjectTech" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="C__MigrationHistory">
+    <Key>
+      <PropertyRef Name="MigrationId" />
+      <PropertyRef Name="ContextKey" />
+      <PropertyRef Name="Model" />
+      <PropertyRef Name="ProductVersion" />
+    </Key>
+    <Property Name="MigrationId" Type="String" Nullable="false" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="ContextKey" Type="String" Nullable="false" MaxLength="300" FixedLength="false" Unicode="true" />
+    <Property Name="Model" Type="Binary" Nullable="false" MaxLength="Max" FixedLength="false" />
+    <Property Name="ProductVersion" Type="String" Nullable="false" MaxLength="32" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="AspNetRole">
+    <Key>
+      <PropertyRef Name="Id" />
+      <PropertyRef Name="Name" />
+    </Key>
+    <Property Name="Id" Type="String" Nullable="false" MaxLength="128" FixedLength="false" Unicode="true" />
+    <Property Name="Name" Type="String" Nullable="false" MaxLength="256" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="AspNetUserClaim">
+    <Key>
+      <PropertyRef Name="Id" />
+      <PropertyRef Name="UserId" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" />
+    <Property Name="UserId" Type="String" Nullable="false" MaxLength="128" FixedLength="false" Unicode="true" />
+    <Property Name="ClaimType" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="ClaimValue" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="AspNetUserLogin">
+    <Key>
+      <PropertyRef Name="LoginProvider" />
+      <PropertyRef Name="ProviderKey" />
+      <PropertyRef Name="UserId" />
+    </Key>
+    <Property Name="LoginProvider" Type="String" Nullable="false" MaxLength="128" FixedLength="false" Unicode="true" />
+    <Property Name="ProviderKey" Type="String" Nullable="false" MaxLength="128" FixedLength="false" Unicode="true" />
+    <Property Name="UserId" Type="String" Nullable="false" MaxLength="128" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="AspNetUserRole">
+    <Key>
+      <PropertyRef Name="UserId" />
+      <PropertyRef Name="RoleId" />
+    </Key>
+    <Property Name="UserId" Type="String" Nullable="false" MaxLength="128" FixedLength="false" Unicode="true" />
+    <Property Name="RoleId" Type="String" Nullable="false" MaxLength="128" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="AspNetUser">
+    <Key>
+      <PropertyRef Name="Id" />
+      <PropertyRef Name="EmailConfirmed" />
+      <PropertyRef Name="PhoneNumberConfirmed" />
+      <PropertyRef Name="TwoFactorEnabled" />
+      <PropertyRef Name="LockoutEnabled" />
+      <PropertyRef Name="AccessFailedCount" />
+      <PropertyRef Name="UserName" />
+    </Key>
+    <Property Name="Id" Type="String" Nullable="false" MaxLength="128" FixedLength="false" Unicode="true" />
+    <Property Name="Email" Type="String" MaxLength="256" FixedLength="false" Unicode="true" />
+    <Property Name="EmailConfirmed" Type="Boolean" Nullable="false" />
+    <Property Name="PasswordHash" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="SecurityStamp" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="PhoneNumber" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="PhoneNumberConfirmed" Type="Boolean" Nullable="false" />
+    <Property Name="TwoFactorEnabled" Type="Boolean" Nullable="false" />
+    <Property Name="LockoutEndDateUtc" Type="DateTime" Precision="0" />
+    <Property Name="LockoutEnabled" Type="Boolean" Nullable="false" />
+    <Property Name="AccessFailedCount" Type="Int32" Nullable="false" />
+    <Property Name="UserName" Type="String" Nullable="false" MaxLength="256" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="Department">
+    <Key>
+      <PropertyRef Name="DepartmentId" />
+    </Key>
+    <Property Name="DepartmentName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="DepartmentId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <NavigationProperty Name="Payslips" Relationship="SynoProjectDBModel.DepartmentId" FromRole="Department" ToRole="Payslip" />
+    <NavigationProperty Name="Resources" Relationship="SynoProjectDBModel.DepartmentId1" FromRole="Department" ToRole="Resource" />
+  </EntityType>
+  <EntityType Name="Payslip">
+    <Key>
+      <PropertyRef Name="PayslipID" />
+    </Key>
+    <Property Name="ResourceID" Type="Int32" />
+    <Property Name="Paymonth" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="Payyear" Type="Int32" />
+    <Property Name="TotalDays" Type="Int32" />
+    <Property Name="Daysworked" Type="Double" />
+    <Property Name="TotalDaysforSalary" Type="Int32" />
+    <Property Name="Leave" Type="Int32" />
+    <Property Name="Basic_earnings" Type="Int32" />
+    <Property Name="Baisc_fixed" Type="Int32" />
+    <Property Name="provident_fund" Type="Int32" />
+    <Property Name="HouseRent_earning" Type="Int32" />
+    <Property Name="HouseRent_Fixed" Type="Int32" />
+    <Property Name="Esic" Type="Int32" />
+    <Property Name="Con_Allowance_earning" Type="Int32" />
+    <Property Name="Con_Allowance_fixed" Type="Int32" />
+    <Property Name="ProfessionalTax" Type="Int32" />
+    <Property Name="Incentive_earning" Type="Int32" />
+    <Property Name="Incentive_Fixed" Type="Int32" />
+    <Property Name="Tds" Type="Int32" />
+    <Property Name="OA1_earning" Type="Int32" />
+    <Property Name="OA1_fixed" Type="Int32" />
+    <Property Name="Lunch" Type="Int32" />
+    <Property Name="OA2_earning" Type="Int32" />
+    <Property Name="OA2_fixed" Type="Int32" />
+    <Property Name="Advanceloan" Type="Int32" />
+    <Property Name="OA3_earning" Type="Int32" />
+    <Property Name="OA3_fixed" Type="Int32" />
+    <Property Name="Specialperformance_earning" Type="Int32" />
+    <Property Name="Specialperformance_Fixed" Type="Int32" />
+    <Property Name="Grosspay_earning" Type="Int32" />
+    <Property Name="Grosspay_fixed" Type="Int32" />
+    <Property Name="Totaldeduction" Type="Int32" />
+    <Property Name="Netpay" Type="Int32" />
+    <Property Name="Date1" Type="DateTime" Precision="3" />
+    <Property Name="PayslipID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="DepartmentId" Type="Int32" />
+    <NavigationProperty Name="Department" Relationship="SynoProjectDBModel.DepartmentId" FromRole="Payslip" ToRole="Department" />
+  </EntityType>
+  <Association Name="DepartmentId">
+    <End Type="SynoProjectDBModel.Department" Role="Department" Multiplicity="0..1" />
+    <End Type="SynoProjectDBModel.Payslip" Role="Payslip" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Department">
+        <PropertyRef Name="DepartmentId" />
+      </Principal>
+      <Dependent Role="Payslip">
+        <PropertyRef Name="DepartmentId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="DepartmentId1">
+    <End Type="SynoProjectDBModel.Department" Role="Department" Multiplicity="0..1" />
+    <End Type="SynoProjectDBModel.Resource" Role="Resource" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Department">
+        <PropertyRef Name="DepartmentId" />
+      </Principal>
+      <Dependent Role="Resource">
+        <PropertyRef Name="DepartmentId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityType Name="Error">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ErrorDate" Type="DateTime" Precision="3" />
+    <Property Name="IpAddress" Type="String" MaxLength="40" FixedLength="false" Unicode="true" />
+    <Property Name="UserAgent" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Exception" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Message" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Everything" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="HttpReferer" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="PathAndQuery" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="CreatedBy" Type="Int32" />
+    <Property Name="CreatedOn" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="ChangedBy" Type="Int32" />
+    <Property Name="ChangedOn" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="FullURL" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="UserName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="ErrorID" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="Contact">
+    <Key>
+      <PropertyRef Name="ContactID" />
+    </Key>
+    <Property Name="ContactID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ContactADDRESS" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Name="SkypeID" Type="String" MaxLength="70" FixedLength="false" Unicode="false" />
+    <Property Name="EmailID" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Name="ContactPersonNo" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Name="CompanyName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="ProjectTitle" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="Interview">
+    <Key>
+      <PropertyRef Name="InterviewID" />
+    </Key>
+    <Property Name="InterviewID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="CandidateName" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="Phone" Type="String" MaxLength="18" FixedLength="false" Unicode="false" />
+    <Property Name="JobForApply" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="JobPortal" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="InterviewDate" Type="DateTime" Precision="0" />
+    <Property Name="Time" Type="String" MaxLength="18" FixedLength="false" Unicode="false" />
+    <Property Name="CurrentCTC" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="Experience" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Feedback" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+  </EntityType>
+</Schema>
